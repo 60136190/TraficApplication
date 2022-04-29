@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.example.traficapplication.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_screen);
-
+        setContentView(R.layout.activity_first);
     }
 }
