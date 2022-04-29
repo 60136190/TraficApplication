@@ -55,5 +55,4 @@
         android:textSize="18sp"
         app:backgroundTint="@color/white"
         />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
