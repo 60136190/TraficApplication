@@ -3,14 +3,18 @@
     package="com.example.traficapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.TraficApplication">
+        android:theme="@style/Theme.TraficApplication"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.auth.FirstActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.auth.RegisterActivity"
             android:exported="false" />
