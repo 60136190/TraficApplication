@@ -13,6 +13,24 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.activities.NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.LawActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.TrickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.SignalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.DocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.auth.FirstActivity"
             android:exported="false" />
         <activity
