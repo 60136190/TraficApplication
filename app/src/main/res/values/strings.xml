@@ -3,4 +3,6 @@
     <string name="string_home">Học bằng lái xe</string>
     <string name="string_usage">Hướng dẫn sử dụng</string>
     <string name="string_setting">Cài đặt ứng dụng</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

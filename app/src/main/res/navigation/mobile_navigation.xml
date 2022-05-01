@@ -9,18 +9,18 @@
         android:id="@+id/nav_home"
         android:name="com.example.traficapplication.activities.fragments.HomeFragment"
         android:label="@string/string_home"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_usage"
         android:name="com.example.traficapplication.activities.fragments.UsageFragment"
         android:label="@string/string_usage"
-        tools:layout="@layout/usage_fragment" />
+        tools:layout="@layout/fragment_usage" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_setting"
         android:name="com.example.traficapplication.activities.fragments.SettingFragment"
         android:label="@string/string_setting"
-        tools:layout="@layout/setting_fragment" />
+        tools:layout="@layout/fragment_setting" />
 
 </navigation>

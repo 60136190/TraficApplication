@@ -13,6 +13,36 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.sliders.SlideActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.activities.DetailSignalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.LawActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.TrickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.SignalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.DocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.auth.FirstActivity"
             android:exported="false" />
         <activity
@@ -23,12 +53,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
