@@ -51,7 +51,7 @@ public class LawAdapter extends RecyclerView.Adapter<LawAdapter.LawViewHolder> {
         }
         holder.imgLaw.setImageResource(l.getImgLaw());
         holder.typeLaw.setText(l.getTypeLaw());
-
+//adknasldnaldnmasdmalmdasdasdasdasd
 //        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
