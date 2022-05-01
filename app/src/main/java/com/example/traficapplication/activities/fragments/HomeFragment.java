@@ -4,14 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,11 +27,11 @@ public class HomeFragment  extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.home_fragment, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
         intiUi();
         setAdapter();
-        int images[] = {R.drawable.img, R.drawable.img_1, R.drawable.img_driving_nav_drawer,
-                R.drawable.img_driving_nav_drawer, R.drawable.img_driving_nav_drawer, R.drawable.img_driving_nav_drawer};
+        int images[] = {R.drawable.img, R.drawable.img_1, R.drawable.img_2,
+                R.drawable.img_3, R.drawable.img_4, R.drawable.img_5};
         for (int image : images) {
             flipperImages(image);
         }
@@ -57,7 +53,7 @@ public class HomeFragment  extends Fragment {
         listFunction.add(new Function(R.drawable.books, "Lí thuyết"));
         listFunction.add(new Function(R.drawable.traffic_lights, "Biển báo đường bộ"));
         listFunction.add(new Function(R.drawable.lightbulb, "Mẹo ôn tập, thi"));
-        listFunction.add(new Function(R.drawable.legal_document, "Tra cứu luât"));
+        listFunction.add(new Function(R.drawable.legal_document, "Tra cứu luật"));
         listFunction.add(new Function(R.drawable.warning, "Lưu ý"));
 
         return listFunction;

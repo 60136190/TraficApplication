@@ -1,20 +1,20 @@
 package com.example.traficapplication.activities.models;
 
 public class Function {
-    private int funtionAvt;
+    private int functionAvt;
     private String functionTittle;
 
     public Function(int funtionAvt, String functionTittle) {
-        this.funtionAvt = funtionAvt;
+        this.functionAvt = funtionAvt;
         this.functionTittle = functionTittle;
     }
 
     public int getFuntionAvt() {
-        return funtionAvt;
+        return functionAvt;
     }
 
     public void setFuntionAvt(int funtionAvt) {
-        this.funtionAvt = funtionAvt;
+        this.functionAvt = funtionAvt;
     }
 
     public String getFunctionTittle() {

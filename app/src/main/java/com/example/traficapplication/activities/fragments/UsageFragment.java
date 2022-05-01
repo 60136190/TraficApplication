@@ -16,7 +16,7 @@ public class UsageFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        usageView = inflater.inflate(R.layout.usage_fragment, container, false);
+        usageView = inflater.inflate(R.layout.fragment_usage, container, false);
        return usageView;
     }
 
