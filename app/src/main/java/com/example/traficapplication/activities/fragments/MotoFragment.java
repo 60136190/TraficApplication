@@ -9,12 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ViewFlipper;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.FunctionAdapter;
-import com.example.traficapplication.activities.adapters.LawAdapter;
-import com.example.traficapplication.activities.models.Function;
+import com.example.traficapplication.activities.adapters.MotoAdapter;
 import com.example.traficapplication.activities.models.Law;
 
 import java.util.ArrayList;
@@ -23,7 +20,8 @@ import java.util.List;
 public class MotoFragment  extends Fragment {
     private View view;
     private RecyclerView recyclerView;
-    private LawAdapter lawAdapter;
+    private MotoAdapter lawAdapter;
+    private GridLayoutManager gridLayoutManager;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,8 +32,8 @@ public class MotoFragment  extends Fragment {
     }
 
     private void setAdapter() {
-        lawAdapter = new LawAdapter(this.getContext());
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this.view.getContext(),3);
+        lawAdapter = new MotoAdapter(this.getContext());
+        gridLayoutManager = new GridLayoutManager(this.view.getContext(),3);
         recyclerView.setLayoutManager(gridLayoutManager);
         lawAdapter.setData(getListLaw());
         recyclerView.setAdapter(lawAdapter);
@@ -43,12 +41,17 @@ public class MotoFragment  extends Fragment {
 
     private List<Law> getListLaw() {
         List<Law> listLaw = new ArrayList<>();
-        listLaw.add(new Law(R.drawable.test, "Thi Sát hạch"));
-        listLaw.add(new Law(R.drawable.books, "Lí thuyết"));
-        listLaw.add(new Law(R.drawable.traffic_lights, "Biển báo đường bộ"));
-        listLaw.add(new Law(R.drawable.lightbulb, "Mẹo ôn tập, thi"));
-        listLaw.add(new Law(R.drawable.legal_document, "Tra cứu luật"));
-        listLaw.add(new Law(R.drawable.warning, "Lưu ý"));
+        listLaw.add(new Law(R.drawable.test, "Hiệu lệnh, biển chỉ dẫn"));
+        listLaw.add(new Law(R.drawable.books, "Chuyển hướng, nhường đường"));
+        listLaw.add(new Law(R.drawable.traffic_lights, "Dừng xe, đỗ xe"));
+        listLaw.add(new Law(R.drawable.lightbulb, "Thiết bị ưu tiên, còi"));
+        listLaw.add(new Law(R.drawable.legal_document, "Tốc độ, khoảng cách an toàn"));
+        listLaw.add(new Law(R.drawable.warning, "Vận chuyển người, hàng hóa"));
+        listLaw.add(new Law(R.drawable.warning, "Trang thiết bị phương tiện"));
+        listLaw.add(new Law(R.drawable.warning, "Đường cấm, đường một chiều"));
+        listLaw.add(new Law(R.drawable.warning, "Nồng độ cồn, chất kích thích"));
+        listLaw.add(new Law(R.drawable.warning, "Giấy tờ xe"));
+        listLaw.add(new Law(R.drawable.warning, "Khác"));
 
         return listLaw;
     }
