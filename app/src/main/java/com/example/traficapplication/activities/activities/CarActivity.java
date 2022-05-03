@@ -1,29 +1,21 @@
 package com.example.traficapplication.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.ItemLawAdapter;
-import com.example.traficapplication.activities.adapters.SignalAdapter;
-import com.example.traficapplication.activities.adapters.TabLayoutVPSingalAdapter;
 import com.example.traficapplication.activities.models.ItemLaw;
-import com.example.traficapplication.activities.models.Signal;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+public class CarActivity extends AppCompatActivity {
 
-public class ListLawActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ItemLawAdapter itemLawAdapter;
     private ArrayList<ItemLaw> itemLaw = new ArrayList<>();
@@ -31,7 +23,7 @@ public class ListLawActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_law);
+        setContentView(R.layout.activity_car);
         initUi();
         setRecylerView();
 
@@ -42,17 +34,16 @@ public class ListLawActivity extends AppCompatActivity {
     private void defineAdapter() {
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
-        if (b.get("detail").equals("Xe may")) {
+        if (b.get("lawPos").equals("0")) {
             itemAdd(R.drawable.img,"abc","cccccccc","cascas");
         }
-        else {
-            if (b.get("detail").equals("Xe hơi")) {
+            if (b.get("lawPos").equals("1")) {
                 itemAdd(R.drawable.img_2,"abc","cccccccc","cascas");
             }
-            else{
+        if (b.get("lawPos").equals("2")){
                 itemAdd(R.drawable.img_3,"abc","cccccccc","cascas");
             }
-        }
+
     }
 
     private void setRecylerView() {
@@ -67,7 +58,7 @@ public class ListLawActivity extends AppCompatActivity {
     }
 
     private void initUi() {
-        recyclerView = findViewById(R.id.rv_list_law);
+        recyclerView = findViewById(R.id.rv_list_car_law);
     }
     private void itemAdd(int img, String tittle, String content, String detail){
         itemLaw.add(new ItemLaw(img,tittle,content,detail));

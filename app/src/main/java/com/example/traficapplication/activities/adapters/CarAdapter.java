@@ -13,8 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DetailItemActivity;
-import com.example.traficapplication.activities.activities.ListLawActivity;
+import com.example.traficapplication.activities.activities.CarActivity;
 import com.example.traficapplication.activities.models.Law;
 
 import java.util.List;
@@ -50,8 +49,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.LawViewHolder> {
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ListLawActivity.class);
-                intent.putExtra("detail","Xe hơi");
+                Intent intent = new Intent(context, CarActivity.class);
+                intent.putExtra("lawPos",String.valueOf(holder.getAdapterPosition()));
                 context.startActivity(intent);
             }
         });

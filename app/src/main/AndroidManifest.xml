@@ -13,13 +13,19 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.activities.OtherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.CarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.MotoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.DetailItemActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activities.DetailListLawActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.activities.ListLawActivity"
             android:exported="false" />
         <activity
             android:name=".activities.sliders.SlideActivity"

@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.DetailListLawActivity;
-import com.example.traficapplication.activities.activities.ListLawActivity;
 import com.example.traficapplication.activities.models.ItemLaw;
 
 

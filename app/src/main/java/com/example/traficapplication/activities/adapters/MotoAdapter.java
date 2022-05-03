@@ -13,8 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DetailItemActivity;
-import com.example.traficapplication.activities.activities.ListLawActivity;
+import com.example.traficapplication.activities.activities.MotoActivity;
 import com.example.traficapplication.activities.models.Law;
 
 import java.util.List;
@@ -50,8 +49,9 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ListLawActivity.class);
-                intent.putExtra("detail","Xe may");
+                Intent intent = new Intent(context, MotoActivity.class);
+                intent.putExtra("lawPos",String.valueOf(holder.getAdapterPosition()));
+                putValue(a,intent);
                 context.startActivity(intent);
             }
         });
@@ -74,5 +74,31 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
             constraintLayout = itemView.findViewById(R.id.item_type_law);
         }
     }
+    public void putValue(int a,Intent intent) {
+        switch (a) {
+            case 0:
+                intent.putExtra("law", 1);
+            case 1:
+                intent.putExtra("law", 2);
+            case 2:
+                intent.putExtra("law", 3);
+            case 3:
+                intent.putExtra("law", 5);
+            case 4:
+                intent.putExtra("law", 6);
+            case 5:
+                intent.putExtra("law", 7);
+            case 6:
+                intent.putExtra("law", 8);
+            case 7:
+                intent.putExtra("law", 9);
+            case 8:
+                intent.putExtra("law", 10);
+            case 9:
+                intent.putExtra("law", 11);
+            case 10:
+                intent.putExtra("law", 12);
 
+        }
+    }
 }

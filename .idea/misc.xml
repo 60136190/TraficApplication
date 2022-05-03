@@ -13,6 +13,7 @@
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/drawable/ic_baseline_menu.xml" value="0.1" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/acac.xml" value="0.1902497027348395" />
+        <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_car.xml" value="0.25" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_detai_iitem.xml" value="0.25" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_detail_list_law.xml" value="0.25" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_detail_signal.xml" value="0.25" />
@@ -23,7 +24,9 @@
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_login_screen.xml" value="0.24635416666666668" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_main.xml" value="0.24635416666666668" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_moto.xml" value="0.25" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_note.xml" value="0.25" />
+        <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_other.xml" value="0.25" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_signal.xml" value="0.1962962962962963" />
         <entry key="..\:/Java/DrivingLicense/app/src/main/res/layout/activity_slide.xml" value="0.25" />
