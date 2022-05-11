@@ -1,6 +1,7 @@
 package com.example.traficapplication.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,6 +15,7 @@ public class SignalActivity extends AppCompatActivity {
 
     private TabLayout tabLayoutSignal;
     private ViewPager viewPagerSignal;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

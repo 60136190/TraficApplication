@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.ItemLawAdapter;
@@ -63,4 +64,6 @@ public class CarActivity extends AppCompatActivity {
     private void itemAdd(int img, String tittle, String content, String detail){
         itemLaw.add(new ItemLaw(img,tittle,content,detail));
     }
+
+
 }

@@ -10,12 +10,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.traficapplication.R;
+import com.example.traficapplication.activities.adapters.InfoAdapter;
 import com.example.traficapplication.activities.adapters.SignalAdapter;
+import com.example.traficapplication.activities.api.ApiClient;
+import com.example.traficapplication.activities.models.Info;
+import com.example.traficapplication.activities.models.ResponseInfo;
 import com.example.traficapplication.activities.models.Signal;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class ProhibitSignalFragment extends Fragment {
@@ -25,6 +34,8 @@ public class ProhibitSignalFragment extends Fragment {
     private SignalAdapter signalAdapter;
     private ArrayList<Signal> signals = new ArrayList<>();
     private LinearLayoutManager layoutManager;
+    private InfoAdapter infoAdapter;
+    private ArrayList<Info> info = new ArrayList<>();
 
 
     @Override
@@ -33,22 +44,34 @@ public class ProhibitSignalFragment extends Fragment {
         prohibitSignalView = inflater.inflate(R.layout.fragment_prohibit_signal, container, false);
         initUi();
         setRecylerView();
+        getIn4();
         return prohibitSignalView;
     }
 
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this.prohibitSignalView.getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        signalAdapter = new SignalAdapter(this.prohibitSignalView.getContext(),signals);
-        recyclerView.setAdapter(signalAdapter);
+        infoAdapter = new InfoAdapter(info,this.prohibitSignalView.getContext());
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.prohibitSignalView.getContext(),layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
-        signals.add(new Signal(R.drawable.img,"abc","abc"));
-        signals.add(new Signal(R.drawable.img,"abc","abc"));
-        signalAdapter.notifyDataSetChanged();
     }
 
     private void initUi() {
         recyclerView = prohibitSignalView.findViewById(R.id.rv_prohibit_signal);
+    }
+    private void getIn4(){
+        Call<ResponseInfo> responseDTOCall = (Call<ResponseInfo>) ApiClient.getApi().getAllData();
+        responseDTOCall.enqueue(new Callback<ResponseInfo>() {
+            @Override
+            public void onResponse(Call<ResponseInfo> call, Response<ResponseInfo> response) {
+                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setAdapter(infoAdapter);
+                info.addAll(response.body().getData());
+            }
+            @Override
+            public void onFailure(Call<ResponseInfo> call, Throwable t) {
+                Toast.makeText(getContext(), "Connect internet is wrong! ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

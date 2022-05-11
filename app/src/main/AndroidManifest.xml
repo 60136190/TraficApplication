@@ -3,7 +3,8 @@
     package="com.example.traficapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +14,15 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.auth.EditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.auth.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.DoingTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.activities.OtherActivity"
             android:exported="false" />
         <activity
@@ -20,9 +30,6 @@
             android:exported="false" />
         <activity
             android:name=".activities.activities.MotoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.activities.DetailItemActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activities.DetailListLawActivity"
