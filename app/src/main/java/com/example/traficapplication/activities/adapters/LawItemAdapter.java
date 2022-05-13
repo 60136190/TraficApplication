@@ -12,7 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DetailListLawActivity;
+import com.example.traficapplication.activities.activities.LawDetailListActivity;
 import com.example.traficapplication.activities.models.ItemLaw;
 
 
@@ -20,24 +20,24 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ItemLawAdapter  extends RecyclerView.Adapter<ItemLawAdapter.ItemLawViewHolder> {
+public class LawItemAdapter extends RecyclerView.Adapter<LawItemAdapter.ItemLawViewHolder> {
     private Context itemLawContext;
     private List<ItemLaw> itemLaw;
 
-    public ItemLawAdapter(Context itemLawContext, List<ItemLaw> itemLaw) {
+    public LawItemAdapter(Context itemLawContext, List<ItemLaw> itemLaw) {
         this.itemLawContext = itemLawContext;
         this.itemLaw = itemLaw;
     }
 
     @NonNull
     @Override
-    public ItemLawAdapter.ItemLawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public LawItemAdapter.ItemLawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_law, parent, false);
-        return new ItemLawAdapter.ItemLawViewHolder(view);
+        return new LawItemAdapter.ItemLawViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ItemLawAdapter.ItemLawViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LawItemAdapter.ItemLawViewHolder holder, int position) {
         ItemLaw itemL = itemLaw.get(position);
         int a = position;
         if (itemL == null) {
@@ -53,7 +53,7 @@ public class ItemLawAdapter  extends RecyclerView.Adapter<ItemLawAdapter.ItemLaw
                 String tittle = itemL.getTittleItemLaw();
                 String content = itemL.getContentItemLaw();
                 String detail = itemL.getDetailItemLaw();
-                Intent intent = new Intent(itemLawContext, DetailListLawActivity.class);
+                Intent intent = new Intent(itemLawContext, LawDetailListActivity.class);
                 intent.putExtra("img",img);
                 intent.putExtra("tittle",tittle);
                 intent.putExtra("content",content);

@@ -41,17 +41,17 @@ public class MotoFragment  extends Fragment {
 
     private List<Law> getListLaw() {
         List<Law> listLaw = new ArrayList<>();
-        listLaw.add(new Law(R.drawable.test, "Hiệu lệnh, biển chỉ dẫn"));
-        listLaw.add(new Law(R.drawable.books, "Chuyển hướng, nhường đường"));
-        listLaw.add(new Law(R.drawable.traffic_lights, "Dừng xe, đỗ xe"));
-        listLaw.add(new Law(R.drawable.lightbulb, "Thiết bị ưu tiên, còi"));
-        listLaw.add(new Law(R.drawable.legal_document, "Tốc độ, khoảng cách an toàn"));
-        listLaw.add(new Law(R.drawable.warning, "Vận chuyển người, hàng hóa"));
-        listLaw.add(new Law(R.drawable.warning, "Trang thiết bị phương tiện"));
-        listLaw.add(new Law(R.drawable.warning, "Đường cấm, đường một chiều"));
-        listLaw.add(new Law(R.drawable.warning, "Nồng độ cồn, chất kích thích"));
-        listLaw.add(new Law(R.drawable.warning, "Giấy tờ xe"));
-        listLaw.add(new Law(R.drawable.warning, "Khác"));
+        listLaw.add(new Law(R.drawable.signpost, "Hiệu lệnh, biển chỉ dẫn"));
+        listLaw.add(new Law(R.drawable.directions, "Chuyển hướng, nhường đường"));
+        listLaw.add(new Law(R.drawable.parking, "Dừng xe, đỗ xe"));
+        listLaw.add(new Law(R.drawable.demostration, "Thiết bị ưu tiên, còi"));
+        listLaw.add(new Law(R.drawable.speedometer, "Tốc độ, khoảng cách an toàn"));
+        listLaw.add(new Law(R.drawable.transportations, "Vận chuyển người, hàng hóa"));
+        listLaw.add(new Law(R.drawable.helmet, "Trang thiết bị phương tiện"));
+        listLaw.add(new Law(R.drawable.stop, "Đường cấm, đường một chiều"));
+        listLaw.add(new Law(R.drawable.non_alcoholic_beer, "Nồng độ cồn, chất kích thích"));
+        listLaw.add(new Law(R.drawable.certification, "Giấy tờ xe"));
+        listLaw.add(new Law(R.drawable.gamer, "Khác"));
 
         return listLaw;
     }

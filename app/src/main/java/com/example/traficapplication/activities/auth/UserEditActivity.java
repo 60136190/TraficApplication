@@ -1,43 +1,27 @@
 package com.example.traficapplication.activities.auth;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DoingTestActivity;
-import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.normal.TedPermission;
-import com.squareup.picasso.Picasso;
-
-import java.io.IOException;
-import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import gun0912.tedbottompicker.TedBottomPicker;
-import gun0912.tedbottompicker.TedBottomPicker.Builder;
-import gun0912.tedbottompicker.TedBottomSheetDialogFragment;
 
-public class EditUserActivity extends AppCompatActivity {
+public class UserEditActivity extends AppCompatActivity {
 
     private CircleImageView avt;
     private ImageView edtAvt;
@@ -95,7 +79,7 @@ public class EditUserActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditUserActivity.this.finish();
+                UserEditActivity.this.finish();
             }
         });
         dialog.show();

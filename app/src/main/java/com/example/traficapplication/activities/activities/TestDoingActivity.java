@@ -12,18 +12,17 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.traficapplication.R;
 
-public class DoingTestActivity extends AppCompatActivity {
+public class TestDoingActivity extends AppCompatActivity {
 
     private long backPressTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doing_test);
+        setContentView(R.layout.activity_test_doing);
 
     }
 
@@ -65,7 +64,7 @@ public class DoingTestActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DoingTestActivity.this.finish();
+                TestDoingActivity.this.finish();
             }
         });
         dialog.show();

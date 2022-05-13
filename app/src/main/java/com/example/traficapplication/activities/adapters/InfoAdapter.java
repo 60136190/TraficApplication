@@ -12,30 +12,30 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DetailSignalActivity;
-import com.example.traficapplication.activities.auth.UserActivity;
+import com.example.traficapplication.activities.activities.SignalDetailActivity;
 import com.example.traficapplication.activities.models.Info;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder> {
-    ArrayList<Info> info;
+    List<Info> info;
     Context context;
 
     public InfoAdapter(ArrayList<Info> info, Context context) {
         this.info = info;
         this.context = context;
-        notifyDataSetChanged();
+
     }
 
-    public ArrayList<Info> getInfo() {
+    public List<Info> getInfo() {
         return info;
     }
 
-    public void setInfo(ArrayList<Info> info) {
+    public void setInfo(List<Info> info) {
         this.info = info;
     }
 
@@ -53,7 +53,10 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_traffic_signal, parent, false);
         return new InfoAdapter.InfoViewHolder(view);
     }
-
+    public void filterListInfo(List<Info> filteredList) {
+        info = filteredList;
+        notifyDataSetChanged();
+    }
     @Override
     public void onBindViewHolder(@NonNull InfoViewHolder holder, int position) {
         Info currentItem = info.get(position);
@@ -65,7 +68,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,DetailSignalActivity.class);
+                Intent intent = new Intent(context, SignalDetailActivity.class);
                 intent.putExtra("id",currentItem.getId());
                 context.startActivity(intent);
             }

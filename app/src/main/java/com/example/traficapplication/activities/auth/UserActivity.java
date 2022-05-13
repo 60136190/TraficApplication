@@ -15,7 +15,7 @@ import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.InfoAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
 import com.example.traficapplication.activities.models.Info;
-import com.example.traficapplication.activities.models.ResponseInfo;
+import com.example.traficapplication.activities.models.InfoResponse;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -47,7 +47,7 @@ public class UserActivity extends AppCompatActivity {
         editUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserActivity.this,EditUserActivity.class);
+                Intent intent = new Intent(UserActivity.this, UserEditActivity.class);
                 Bitmap bitmap = BitmapFactory.decodeResource
                         (getResources(), R.drawable.user); // your bitmap
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
@@ -68,10 +68,10 @@ public class UserActivity extends AppCompatActivity {
 
     }
     private void getModelApi(){
-        Call<ResponseInfo> responseDTOCall = (Call<ResponseInfo>) ApiClient.getApi().getAllData();
-        responseDTOCall.enqueue(new Callback<ResponseInfo>() {
+        Call<InfoResponse> responseDTOCall = (Call<InfoResponse>) ApiClient.getApi().getAllData();
+        responseDTOCall.enqueue(new Callback<InfoResponse>() {
             @Override
-            public void onResponse(Call<ResponseInfo> call, Response<ResponseInfo> response) {
+            public void onResponse(Call<InfoResponse> call, Response<InfoResponse> response) {
                 String url = response.body().getData().get(1).getUrl();
                 Picasso.with(UserActivity.this)
                         .load(url).fit().centerInside().into(imgUser);
@@ -79,7 +79,7 @@ public class UserActivity extends AppCompatActivity {
 
             }
             @Override
-            public void onFailure(Call<ResponseInfo> call, Throwable t) {
+            public void onFailure(Call<InfoResponse> call, Throwable t) {
                 Toast.makeText(UserActivity.this, "Connect internet is wrong! ", Toast.LENGTH_SHORT).show();
             }
         });

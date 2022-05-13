@@ -7,10 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.ItemLawAdapter;
+import com.example.traficapplication.activities.adapters.LawItemAdapter;
 import com.example.traficapplication.activities.models.ItemLaw;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 public class CarActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ItemLawAdapter itemLawAdapter;
+    private LawItemAdapter lawItemAdapter;
     private ArrayList<ItemLaw> itemLaw = new ArrayList<>();
     private LinearLayoutManager layoutManager;
     @Override
@@ -50,12 +49,12 @@ public class CarActivity extends AppCompatActivity {
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        itemLawAdapter = new ItemLawAdapter(this,itemLaw);
-        recyclerView.setAdapter(itemLawAdapter);
+        lawItemAdapter = new LawItemAdapter(this,itemLaw);
+        recyclerView.setAdapter(lawItemAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
         defineAdapter();
-        itemLawAdapter.notifyDataSetChanged();
+        lawItemAdapter.notifyDataSetChanged();
     }
 
     private void initUi() {

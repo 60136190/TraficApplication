@@ -7,17 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.CarActivity;
-import com.example.traficapplication.activities.activities.DoingTestActivity;
-import com.example.traficapplication.activities.models.Document;
+import com.example.traficapplication.activities.activities.TestDoingActivity;
 import com.example.traficapplication.activities.models.Test;
 
 import java.util.ArrayList;
@@ -55,7 +51,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(context, DoingTestActivity.class);
+                Intent intent = new Intent(context, TestDoingActivity.class);
                 intent.putExtra("numTest",String.valueOf(t.getTittleTest()));
                 context.startActivity(intent);
             }

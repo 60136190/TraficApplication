@@ -5,14 +5,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.DocumentAdapter;
-import com.example.traficapplication.activities.adapters.ItemLawAdapter;
 import com.example.traficapplication.activities.models.Document;
-import com.example.traficapplication.activities.models.ItemLaw;
 
 import java.util.ArrayList;
 

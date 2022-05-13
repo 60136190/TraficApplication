@@ -6,18 +6,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.traficapplication.activities.fragments.AuxiliarySignalFragment;
 import com.example.traficapplication.activities.fragments.CarFragment;
-import com.example.traficapplication.activities.fragments.CommandSignalFragment;
-import com.example.traficapplication.activities.fragments.GuideSignalFragment;
 import com.example.traficapplication.activities.fragments.MotoFragment;
 import com.example.traficapplication.activities.fragments.OtherFragment;
-import com.example.traficapplication.activities.fragments.ProhibitSignalFragment;
-import com.example.traficapplication.activities.fragments.WarningSignalFragment;
 
-public class TabLayoutVPLawAdapter extends FragmentStatePagerAdapter {
+public class LawTabLayoutVPAdapter extends FragmentStatePagerAdapter {
 
-    public TabLayoutVPLawAdapter(@NonNull FragmentManager fm, int behavior) {
+    public LawTabLayoutVPAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
 

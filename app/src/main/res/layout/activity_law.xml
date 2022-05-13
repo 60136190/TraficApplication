@@ -16,6 +16,7 @@
         app:tabSelectedTextColor="@color/purple_200"
         app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
         android:background="@color/dark_white"
+
         />
     <androidx.viewpager.widget.ViewPager
         android:layout_marginTop="5dp"

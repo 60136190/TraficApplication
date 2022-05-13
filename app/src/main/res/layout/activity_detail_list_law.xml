@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.activities.DetailListLawActivity"
+    tools:context=".activities.activities.LawDetailListActivity"
     android:background="@color/dark_white">
     <TextView
         android:id="@+id/tv_tittle_item_law"

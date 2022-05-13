@@ -6,16 +6,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.traficapplication.activities.fragments.AuxiliarySignalFragment;
-import com.example.traficapplication.activities.fragments.CommandSignalFragment;
-import com.example.traficapplication.activities.fragments.GuideSignalFragment;
-import com.example.traficapplication.activities.fragments.ProhibitSignalFragment;
-import com.example.traficapplication.activities.fragments.WarningSignalFragment;
+import com.example.traficapplication.activities.fragments.SignalAuxiliaryFragment;
+import com.example.traficapplication.activities.fragments.SignalCommandFragment;
+import com.example.traficapplication.activities.fragments.SignalGuideFragment;
+import com.example.traficapplication.activities.fragments.SignalProhibitFragment;
+import com.example.traficapplication.activities.fragments.SignalWarningFragment;
 
-public class TabLayoutVPSingalAdapter extends FragmentStatePagerAdapter {
+public class SingalTabLayoutVPAdapter extends FragmentStatePagerAdapter {
 
 
-    public TabLayoutVPSingalAdapter(@NonNull FragmentManager fm, int behavior) {
+    public SingalTabLayoutVPAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
 
@@ -25,17 +25,17 @@ public class TabLayoutVPSingalAdapter extends FragmentStatePagerAdapter {
         switch (position)
         {
             case 0:
-                return new ProhibitSignalFragment();
+                return new SignalProhibitFragment();
             case 1:
-                return new CommandSignalFragment();
+                return new SignalCommandFragment();
             case 2:
-                return new GuideSignalFragment();
+                return new SignalGuideFragment();
             case 3:
-                return new WarningSignalFragment();
+                return new SignalWarningFragment();
             case 4:
-                return new AuxiliarySignalFragment();
+                return new SignalAuxiliaryFragment();
             default:
-                return new ProhibitSignalFragment();
+                return new SignalProhibitFragment();
         }
 
     }
