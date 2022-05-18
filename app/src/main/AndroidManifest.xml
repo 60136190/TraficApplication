@@ -3,7 +3,8 @@
     package="com.example.traficapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.auth.UserEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.auth.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activities.TestDoingActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.activities.OtherActivity"
             android:exported="false" />
@@ -22,10 +32,7 @@
             android:name=".activities.activities.MotoActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.DetailItemActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.activities.DetailListLawActivity"
+            android:name=".activities.activities.LawDetailListActivity"
             android:exported="false" />
         <activity
             android:name=".activities.sliders.SlideActivity"
@@ -37,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.activities.DetailSignalActivity"
+            android:name=".activities.activities.SignalDetailActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activities.NoteActivity"

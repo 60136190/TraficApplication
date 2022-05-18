@@ -35,7 +35,6 @@ public class HomeFragment  extends Fragment {
         for (int image : images) {
             flipperImages(image);
         }
-
         return view;
     }
 

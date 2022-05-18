@@ -13,6 +13,8 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.traficapplication.R;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class SliderAdapter extends PagerAdapter {
     private Context sliderContext;
     private LayoutInflater layoutInflater;
@@ -22,17 +24,20 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     public int[] slide_image ={
-            R.drawable.img,
-            R.drawable.img_5,
-            R.drawable.img_4,
-            R.drawable.img_3
+            R.drawable.racing,
+            R.drawable.car1,
+            R.drawable.traffic_signal,
+            R.drawable.accident
 
     };
     public String[] slide_tittle ={
-            "a","b","c","d"
+            "Xin chào","Ứng dụng cung cấp","Ngoài ra còn có","Chúc bạn may mắn"
     };
     public String[] slide_detail ={
-            "e","f","g","h"
+            "Cảm ơn đã cài đặt ứng dụng",
+            "Các câu hỏi, tài liệu ôn thi",
+            "Thông tin về luật, tín hiệu giao thông",
+            "Đạt kết quả cao trong bài sát hạch và hơn hết là điều khiển phương tiện an toàn nhé"
     };
     @Override
     public int getCount() {
@@ -49,11 +54,11 @@ public class SliderAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) sliderContext.getSystemService(sliderContext.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slider, (ViewGroup) container,false);
-        ImageView slideImageView = view.findViewById(R.id.slide_img);
+        CircleImageView slideImageView = view.findViewById(R.id.slide_img);
         TextView slideHeading = view.findViewById(R.id.slide_heading);
         TextView slideDescs = view.findViewById(R.id.slide_descs);
 
-        slideImageView.setBackgroundResource(slide_image[position]);
+        slideImageView.setImageResource(slide_image[position]);
         slideHeading.setText(slide_tittle[position]);
         slideDescs.setText(slide_detail[position]);
 

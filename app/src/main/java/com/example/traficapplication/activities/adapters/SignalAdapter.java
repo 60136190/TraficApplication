@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,9 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DetailSignalActivity;
-import com.example.traficapplication.activities.activities.TestActivity;
-import com.example.traficapplication.activities.models.Function;
+import com.example.traficapplication.activities.activities.SignalDetailActivity;
 import com.example.traficapplication.activities.models.Signal;
 
 import java.util.List;
@@ -38,6 +35,10 @@ public class SignalAdapter extends RecyclerView.Adapter<SignalAdapter.SignalView
         return new SignalAdapter.SignalViewHolder(view);
     }
 
+    public void filterListSignal(List<Signal> filteredList) {
+        signal = filteredList;
+        notifyDataSetChanged();
+    }
     @Override
     public void onBindViewHolder(@NonNull SignalViewHolder holder, int position) {
         Signal sign = signal.get(position);
@@ -53,7 +54,7 @@ public class SignalAdapter extends RecyclerView.Adapter<SignalAdapter.SignalView
                 int img = sign.getSignalImg();
                 String name = sign.getSignalName();
                 String detail = sign.getSignalDetail();
-                Intent intent = new Intent(signalContext, DetailSignalActivity.class);
+                Intent intent = new Intent(signalContext, SignalDetailActivity.class);
                 intent.putExtra("img",img);
                 intent.putExtra("name",name);
                 intent.putExtra("detail",detail);

@@ -40,11 +40,9 @@ public class SlideActivity extends AppCompatActivity {
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 mSlideviewPager.setCurrentItem(mCurrentPage + 1);
                 String fi = mNext.getText().toString();
                 if( mNext.isClickable()){
-
                     Intent intent4 = new Intent(SlideActivity.this, MainActivity.class);
                     startActivity(intent4);
                     finish();
@@ -54,7 +52,6 @@ public class SlideActivity extends AppCompatActivity {
         });
 
     }
-
     public void initUi(){
         mSlideviewPager = (ViewPager)findViewById(R.id.slide_viewpager);
         mDotLayout = (LinearLayout) findViewById(R.id.dot_indicator);
@@ -92,14 +89,12 @@ public class SlideActivity extends AppCompatActivity {
             }else if(i == mDots.length -1){
                 mNext.setEnabled(true);
                 mNext.setVisibility(View.VISIBLE);
-                mNext.setText("Finish");
+                mNext.setText("OK");
 
             }else {
                 mNext.setVisibility(View.INVISIBLE);
-
             }
         }
-
         @Override
         public void onPageScrollStateChanged(int state) {
 

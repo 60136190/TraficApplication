@@ -7,8 +7,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.TabLayoutVPLawAdapter;
-import com.example.traficapplication.activities.adapters.TabLayoutVPSingalAdapter;
+import com.example.traficapplication.activities.adapters.LawTabLayoutVPAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class LawActivity extends AppCompatActivity {
@@ -20,7 +19,7 @@ public class LawActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_law);
         initUi();
-        TabLayoutVPLawAdapter adapterLaw = new TabLayoutVPLawAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        LawTabLayoutVPAdapter adapterLaw = new LawTabLayoutVPAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPagerLaw.setAdapter(adapterLaw);
         tabLayoutLaw.setupWithViewPager(viewPagerLaw);
     }
