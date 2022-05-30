@@ -8,10 +8,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.SingalTabLayoutVPAdapter;
+import com.example.traficapplication.activities.adapters.SignTabLayoutVPAdapter;
 import com.google.android.material.tabs.TabLayout;
 
-public class SignalActivity extends AppCompatActivity {
+public class SignActivity extends AppCompatActivity {
 
     private TabLayout tabLayoutSignal;
     private ViewPager viewPagerSignal;
@@ -20,9 +20,9 @@ public class SignalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signal);
+        setContentView(R.layout.activity_sign);
         initUi();
-        SingalTabLayoutVPAdapter adapterSignal = new SingalTabLayoutVPAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        SignTabLayoutVPAdapter adapterSignal = new SignTabLayoutVPAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPagerSignal.setAdapter(adapterSignal);
         tabLayoutSignal.setupWithViewPager(viewPagerSignal);
     }

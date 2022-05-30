@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.auth.PasswordUpdateActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.sliders.FirstActivity"
             android:exported="true">
             <intent-filter>
@@ -23,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activities.auth.UserUpdateActivity"
             android:exported="false" />
@@ -47,10 +49,10 @@
             android:exported="false" />
         <activity
             android:name=".activities.sliders.SlideActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name=".activities.activities.SignalDetailActivity"
-            android:exported="false"/>
+            android:name=".activities.activities.SignDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.activities.NoteActivity"
             android:exported="false" />
@@ -61,7 +63,7 @@
             android:name=".activities.activities.TrickActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.SignalActivity"
+            android:name=".activities.activities.SignActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activities.DocumentsActivity"

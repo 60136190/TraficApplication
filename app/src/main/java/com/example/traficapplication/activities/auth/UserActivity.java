@@ -37,6 +37,7 @@ public class UserActivity extends AppCompatActivity {
    private CircleImageView imgUser;
     private TextView user,email,phoneNum,address;
     private ImageView editUser,logOutUser;
+    private Button btnChangePass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,21 @@ public class UserActivity extends AppCompatActivity {
         edtUsr();
         logOutUsr();
         getIn4();
+        changePass();
     }
+
+    private void changePass() {
+        btnChangePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this, PasswordUpdateActivity.class);
+                startActivity(intent);
+                UserActivity.this.finish();
+            }
+        });
+
+    }
+
     private void logOutUsr() {
         logOutUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +148,7 @@ public class UserActivity extends AppCompatActivity {
         address = findViewById(R.id.tv_add);
         editUser = findViewById(R.id.img_edit_user);
         logOutUser = findViewById(R.id.img_out_user);
+        btnChangePass = findViewById(R.id.btn_update_pass);
 
     }
 

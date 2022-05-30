@@ -1,6 +1,7 @@
 package com.example.traficapplication.activities.api;
 
 import com.example.traficapplication.activities.models.LoginResponse;
+import com.example.traficapplication.activities.models.PasswordUpdate;
 import com.example.traficapplication.activities.models.ProfileResponse;
 import com.example.traficapplication.activities.models.ResponseDTO;
 import com.example.traficapplication.activities.models.UserLogin;
@@ -22,8 +23,9 @@ public interface UserApi {
     @POST("user/register")
     Call<ResponseDTO> Register(@Body UserRegister userRegister);
     @PATCH("user/updateUser/{id}")
-    Call<ResponseDTO> Update(@Body UserUpdate userUpdate, @Path("id") String id);
-
+    Call<ResponseDTO> UpdateUser(@Body UserUpdate userUpdate, @Path("id") String id);
+    @PATCH("user/changePassword/{id}")
+    Call<ResponseDTO> UpdatePass(@Body PasswordUpdate passwordUpdate, @Path("id") String id);
 
 
 

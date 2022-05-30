@@ -13,14 +13,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.SignalDetailActivity;
-import com.example.traficapplication.activities.models.Info;
+import com.example.traficapplication.activities.activities.SignDetailActivity;
 import com.example.traficapplication.activities.models.Sign;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder> {
     List<Sign> signs;
@@ -49,7 +46,7 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
     @NonNull
     @Override
     public SignViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_traffic_signal, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_traffic_sign, parent, false);
         return new SignAdapter.SignViewHolder(view);
     }
     @Override
@@ -64,7 +61,7 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
         holder.detailSignal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, SignalDetailActivity.class);
+                Intent intent = new Intent(context, SignDetailActivity.class);
                 String id = currentItem.getId();
                 intent.putExtra("id",id);
                 context.startActivity(intent);

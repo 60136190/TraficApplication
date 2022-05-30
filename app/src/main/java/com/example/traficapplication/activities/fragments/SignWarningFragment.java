@@ -16,15 +16,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.InfoAdapter;
 import com.example.traficapplication.activities.adapters.SignAdapter;
-import com.example.traficapplication.activities.adapters.SignalAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
-import com.example.traficapplication.activities.models.Info;
-import com.example.traficapplication.activities.models.InfoResponse;
 import com.example.traficapplication.activities.models.Sign;
 import com.example.traficapplication.activities.models.SignResponse;
-import com.example.traficapplication.activities.models.Signal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,42 +29,38 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class SignalGuideFragment extends Fragment {
+public class SignWarningFragment extends Fragment {
 
-    private View guideSignalView;
+    private View warningSignalView;
     private RecyclerView recyclerView;
-    private SignalAdapter signalAdapter;
-    private ArrayList<Signal> signals = new ArrayList<>();
     private LinearLayoutManager layoutManager;
     private EditText edtSearch;
-    private InfoAdapter infoAdapter;
-    private ArrayList<Info> info = new ArrayList<>();
     private SignAdapter signAdapter;
     private  ArrayList<Sign> signs = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        guideSignalView = inflater.inflate(R.layout.fragment_signal_guide, container, false);
+        warningSignalView = inflater.inflate(R.layout.fragment_sign_warning, container, false);
         initUi();
         setRecylerView();
         getIn4();
         search();
-        return guideSignalView;
+        return warningSignalView;
     }
 
     private void setRecylerView() {
-        layoutManager = new LinearLayoutManager(this.guideSignalView.getContext());
-        signAdapter = new SignAdapter(signs,this.guideSignalView.getContext());
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.guideSignalView.getContext(),layoutManager.getOrientation());
+        layoutManager = new LinearLayoutManager(this.warningSignalView.getContext());
+        signAdapter = new SignAdapter(signs,this.warningSignalView.getContext());
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.warningSignalView.getContext(),layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
-
     }
 
     private void initUi() {
-        recyclerView = guideSignalView.findViewById(R.id.rv_guide_signal);
-        edtSearch = guideSignalView.findViewById(R.id.edt_search_guide);
+        recyclerView = warningSignalView.findViewById(R.id.rv_warning_signal);
+        edtSearch = warningSignalView.findViewById(R.id.edt_search_warning);
     }
+
     private void getIn4(){
         Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getProhibitSign();
         responseDTOCall.enqueue(new Callback<SignResponse>() {
