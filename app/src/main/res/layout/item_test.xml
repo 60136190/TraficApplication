@@ -37,7 +37,8 @@
         app:layout_constraintBottom_toBottomOf="@id/btn_test"
         app:layout_constraintLeft_toRightOf="@id/img_item_test"
         android:layout_marginLeft="10dp"
-        android:text="25 câu/ 19 phút"
+        android:text="@string/test"
+        android:textColor="@color/grey"
 
         />
     <Button

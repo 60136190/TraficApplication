@@ -8,21 +8,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
     public static Retrofit getRetrofit(){
         //http://192.168.1.2:5000/customer/login
-
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-
         OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://18.138.235.4:5000/")
+                .baseUrl("https://driving-license-thainam.herokuapp.com/")
                 .client(okHttpClient)
                 .build();
         return retrofit;
     }
-
-    public static Api getApi(){
-        Api api = getRetrofit().create(Api.class);
-        return api;
+    public static SignApi getApi(){
+        SignApi signApi = getRetrofit().create(SignApi.class);
+        return signApi;
+    }
+    public static UserApi User(){
+        UserApi userApi = getRetrofit().create(UserApi.class);
+        return  userApi;
     }
 }

@@ -45,7 +45,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
 
-    //Circle Image View
+    //Circle SignImage View
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
 
@@ -59,6 +59,8 @@ dependencies {
     implementation 'gun0912.ted:tedbottompicker:2.0.1'
     //permisson
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
+    //GifImageView
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
 
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

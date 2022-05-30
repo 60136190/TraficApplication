@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.auth.UserEditActivity"
+    android:background="@color/light_white"
+    tools:context=".activities.auth.UserUpdateActivity"
     >
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_edit_user"
@@ -26,6 +27,8 @@
         app:layout_constraintBottom_toBottomOf="@id/img_edit_user"
         />
     <EditText
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
         android:id="@+id/edt_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +56,9 @@
         android:layout_marginLeft="20dp"
         android:textStyle="italic|bold"
         />
-    <EditText
+    <TextView
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:id="@+id/edt_mail"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
@@ -61,6 +66,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:textColor="@color/grey"
         android:background="@drawable/border_item_function"
         android:backgroundTint="@color/dark_white"
         />
@@ -78,6 +84,8 @@
         android:textStyle="italic|bold"
         />
     <EditText
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:id="@+id/edt_phoneNum"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
@@ -85,6 +93,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:textColor="@color/grey"
         android:background="@drawable/border_item_function"
         android:backgroundTint="@color/dark_white"
         />
@@ -102,6 +111,8 @@
         android:textStyle="italic|bold"
         />
     <EditText
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:id="@+id/edt_add"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
@@ -109,38 +120,16 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:textColor="@color/grey"
         android:background="@drawable/border_item_function"
         android:backgroundTint="@color/dark_white"
         />
-    <TextView
-        android:id="@+id/tv_edit_gender"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@id/edt_gender"
-        app:layout_constraintBottom_toBottomOf="@id/edt_gender"
-        android:text="Giới tính:"
-        android:textSize="20dp"
-        android:textColor="@color/purple_800"
-        android:layout_marginLeft="20dp"
-        android:textStyle="italic|bold"
-        />
-    <EditText
-        android:id="@+id/edt_gender"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/edt_add"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/border_item_function"
-        android:backgroundTint="@color/dark_white"
-        />
+
     <Button
         android:id="@+id/btn_save_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/edt_gender"
+        app:layout_constraintTop_toBottomOf="@id/edt_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -149,6 +138,15 @@
         android:text="Lưu"
         android:textAllCaps="false"
         android:textColor="@color/dark_white"/>
+    <ImageView
+        android:id="@+id/img_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_margin="20dp"/>
+
 
     
 

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +15,17 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.auth.UserEditActivity"
+            android:name=".activities.sliders.FirstActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.auth.UserUpdateActivity"
             android:exported="false" />
         <activity
             android:name=".activities.auth.UserActivity"
@@ -36,16 +47,10 @@
             android:exported="false" />
         <activity
             android:name=".activities.sliders.SlideActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".activities.activities.SignalDetailActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".activities.activities.NoteActivity"
             android:exported="false" />
@@ -65,7 +70,7 @@
             android:name=".activities.activities.TestActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.auth.FirstActivity"
+            android:name=".activities.auth.LoginFirstActivity"
             android:exported="false" />
         <activity
             android:name=".activities.auth.RegisterActivity"

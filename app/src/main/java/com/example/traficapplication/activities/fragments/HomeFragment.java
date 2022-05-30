@@ -54,13 +54,13 @@ public class HomeFragment  extends Fragment {
         listFunction.add(new Function(R.drawable.lightbulb, "Mẹo ôn tập, thi"));
         listFunction.add(new Function(R.drawable.legal_document, "Tra cứu luật"));
         listFunction.add(new Function(R.drawable.warning, "Lưu ý"));
-
         return listFunction;
     }
     private void intiUi() {
         flipperImages = view.findViewById(R.id.view_flipper_slide);
         recyclerView = view.findViewById(R.id.rv_function);
     }
+
         public void flipperImages(int image) {
         ImageView imageView = new ImageView(getContext());
         imageView.setBackgroundResource(image);

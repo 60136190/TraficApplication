@@ -33,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15dp"
+        android:textColor="@color/grey"
         app:layout_constraintTop_toBottomOf="@+id/tv_tittle_item_document"
         app:layout_constraintBottom_toTopOf="@id/sb_item_document"
         app:layout_constraintLeft_toRightOf="@id/img_item_document"

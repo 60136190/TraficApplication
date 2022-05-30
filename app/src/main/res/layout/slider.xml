@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/purple_800">
+    android:background="@color/dark_tangerine">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/slide_img"
             android:layout_width="270dp"

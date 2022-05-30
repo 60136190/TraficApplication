@@ -26,12 +26,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
     <TextView
+        android:id="@+id/tv_code_signal_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/img_signal_detail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        android:textColor="@color/purple_800"
+        android:textStyle="bold"/>
+
+    <TextView
         android:layout_margin="10dp"
         android:id="@+id/tv_describe_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_item_function"
-        app:layout_constraintTop_toBottomOf="@id/img_signal_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_signal_detail"
         android:textStyle="italic"
         android:textColor="@color/grey"
         android:gravity="center"

@@ -28,10 +28,6 @@ public class TestActivity extends AppCompatActivity {
         setRecylerView();
     }
 
-
-
-
-
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

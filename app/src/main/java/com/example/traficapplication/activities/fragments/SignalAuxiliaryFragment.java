@@ -18,10 +18,13 @@ import android.widget.Toast;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.InfoAdapter;
+import com.example.traficapplication.activities.adapters.SignAdapter;
 import com.example.traficapplication.activities.adapters.SignalAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
 import com.example.traficapplication.activities.models.Info;
 import com.example.traficapplication.activities.models.InfoResponse;
+import com.example.traficapplication.activities.models.Sign;
+import com.example.traficapplication.activities.models.SignResponse;
 import com.example.traficapplication.activities.models.Signal;
 
 import java.util.ArrayList;
@@ -44,7 +47,8 @@ private ArrayAdapter<String> adapter;
     private EditText edtSearch;
     private InfoAdapter infoAdapter;
     private ArrayList<Info> info = new ArrayList<>();
-
+    private SignAdapter signAdapter;
+    private  ArrayList<Sign> signs = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,16 +64,9 @@ private ArrayAdapter<String> adapter;
 
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this.auxiliarySignalView.getContext());
-//        recyclerView.setLayoutManager(layoutManager);
-        infoAdapter = new InfoAdapter(info,this.auxiliarySignalView.getContext());
-//        signalAdapter = new SignalAdapter(this.auxiliarySignalView.getContext(),signals);
-//        signalAdapter = new SignalAdapter(this.auxiliarySignalView.getContext(),getList());
-//        recyclerView.setAdapter(infoAdapter);
+        signAdapter = new SignAdapter(signs,this.auxiliarySignalView.getContext());
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.auxiliarySignalView.getContext(),layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
-//        signals.add(new Signal(R.drawable.img,"abc","cccccccc"));
-//        signals.add(new Signal(R.drawable.img,"abc","abc"));
-//        signalAdapter.notifyDataSetChanged();
     }
 
     private void initUi() {
@@ -77,17 +74,17 @@ private ArrayAdapter<String> adapter;
         edtSearch = auxiliarySignalView.findViewById(R.id.edt_search_auxiliary);
     }
     private void getIn4(){
-        Call<InfoResponse> responseDTOCall = (Call<InfoResponse>) ApiClient.getApi().getAllData();
-        responseDTOCall.enqueue(new Callback<InfoResponse>() {
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getAuxiliarySign();
+        responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
-            public void onResponse(Call<InfoResponse> call, Response<InfoResponse> response) {
+            public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {
                 recyclerView.setLayoutManager(layoutManager);
-                recyclerView.setAdapter(infoAdapter);
-                info.addAll(response.body().getData());
+                recyclerView.setAdapter(signAdapter);
+                signs.addAll(response.body().getData());
             }
             @Override
-            public void onFailure(Call<InfoResponse> call, Throwable t) {
-                Toast.makeText(getContext(), "Connect internet is wrong! ", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<SignResponse> call, Throwable t) {
+                Toast.makeText(getContext(), "Connecting... ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -97,14 +94,11 @@ private ArrayAdapter<String> adapter;
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
 
             }
-
             @Override
             public void afterTextChanged(Editable s) {
                 filter(s.toString());
@@ -113,13 +107,13 @@ private ArrayAdapter<String> adapter;
 
     }
     private void filter(String text) {
-        List<Info> filteredList = new ArrayList<>();
-        for (Info item : info) {
-            if (item.getTensp().toUpperCase().contains(text.toUpperCase())) {
+        List<Sign> filteredList = new ArrayList<>();
+        for (Sign item : signs) {
+            if (item.getName().toUpperCase().contains(text.toUpperCase())) {
                 filteredList.add(item);
             }
         }
-        infoAdapter.filterListInfo(filteredList);
+        signAdapter.filterListSign(filteredList);
     }
 
 }

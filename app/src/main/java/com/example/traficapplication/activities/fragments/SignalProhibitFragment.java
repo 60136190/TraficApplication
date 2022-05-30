@@ -17,10 +17,13 @@ import android.widget.Toast;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.InfoAdapter;
+import com.example.traficapplication.activities.adapters.SignAdapter;
 import com.example.traficapplication.activities.adapters.SignalAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
 import com.example.traficapplication.activities.models.Info;
 import com.example.traficapplication.activities.models.InfoResponse;
+import com.example.traficapplication.activities.models.Sign;
+import com.example.traficapplication.activities.models.SignResponse;
 import com.example.traficapplication.activities.models.Signal;
 
 import java.util.ArrayList;
@@ -32,12 +35,9 @@ import retrofit2.Response;
 
 
 public class SignalProhibitFragment extends Fragment {
-
-
     // search bar
     private EditText edtSearch;
     private CharSequence search = "";
-
     private View prohibitSignalView;
     private RecyclerView recyclerView;
     private SignalAdapter signalAdapter;
@@ -45,7 +45,8 @@ public class SignalProhibitFragment extends Fragment {
     private LinearLayoutManager layoutManager;
     private InfoAdapter infoAdapter;
     private ArrayList<Info> info = new ArrayList<>();
-
+    private SignAdapter signAdapter;
+    private  ArrayList<Sign> signs = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,7 +62,7 @@ public class SignalProhibitFragment extends Fragment {
 
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this.prohibitSignalView.getContext());
-        infoAdapter = new InfoAdapter(info,this.prohibitSignalView.getContext());
+        signAdapter = new SignAdapter(signs,this.prohibitSignalView.getContext());
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.prohibitSignalView.getContext(),layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
@@ -72,21 +73,19 @@ public class SignalProhibitFragment extends Fragment {
     }
 
     private void getIn4(){
-        Call<InfoResponse> responseDTOCall = (Call<InfoResponse>) ApiClient.getApi().getAllData();
-        responseDTOCall.enqueue(new Callback<InfoResponse>() {
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getProhibitSign();
+        responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
-            public void onResponse(Call<InfoResponse> call, Response<InfoResponse> response) {
+            public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {
                 recyclerView.setLayoutManager(layoutManager);
-                recyclerView.setAdapter(infoAdapter);
-                info.addAll(response.body().getData());
+                recyclerView.setAdapter(signAdapter);
+                signs.addAll(response.body().getData());
             }
             @Override
-            public void onFailure(Call<InfoResponse> call, Throwable t) {
-                Toast.makeText(getContext(), "Connect internet is wrong! ", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<SignResponse> call, Throwable t) {
+                Toast.makeText(getContext(), "Connecting... ", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
     private void search(){
         edtSearch.addTextChangedListener(new TextWatcher() {
@@ -108,13 +107,13 @@ public class SignalProhibitFragment extends Fragment {
 
     }
     private void filter(String text) {
-        List<Info> filteredList = new ArrayList<>();
-        for (Info item : info) {
-            if (item.getTensp().toUpperCase().contains(text.toUpperCase())) {
+        List<Sign> filteredList = new ArrayList<>();
+        for (Sign item : signs) {
+            if (item.getName().toUpperCase().contains(text.toUpperCase())) {
                 filteredList.add(item);
             }
         }
-        infoAdapter.filterListInfo(filteredList);
+        signAdapter.filterListSign(filteredList);
     }
 
 }
