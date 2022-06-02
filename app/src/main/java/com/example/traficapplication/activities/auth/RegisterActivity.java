@@ -49,16 +49,16 @@ public class RegisterActivity extends AppCompatActivity {
         phone = String.valueOf(edtPhone.getText());
         add = String.valueOf(edtAdd.getText());
         UserRegister userRegister = new UserRegister(mail,pass,name,phone,add);
-        Call<ResponseDTO> responseDTOCall = (Call<ResponseDTO>) ApiClient.User().Register(userRegister);
-        responseDTOCall.enqueue(new Callback<ResponseDTO>() {
+        Call<LoginResponse> responseDTOCall = (Call<LoginResponse>) ApiClient.User().Register(userRegister);
+        responseDTOCall.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<ResponseDTO> call, Response<ResponseDTO> response) {
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.body().getStatus()==200)
                 {
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                     StoreUtils.save(RegisterActivity.this, Contants.email, mail);
-//                    StoreUtils.save(RegisterActivity.this, Contants.id, String.valueOf(response.body().getId()));
+                    StoreUtils.save(RegisterActivity.this, Contants.id, String.valueOf(response.body().getId()));
                     finish();
                 }
                 else
@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
             @Override
-            public void onFailure(Call<ResponseDTO> call, Throwable t) {
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(RegisterActivity.this, "Connecting... ", Toast.LENGTH_SHORT).show();
             }
         });

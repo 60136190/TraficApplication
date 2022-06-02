@@ -145,7 +145,7 @@ public class PasswordUpdateActivity extends AppCompatActivity {
                     back();
                 }
                 else {
-                    Toast.makeText(PasswordUpdateActivity.this, response.body().getMsg() +id +"\n"+ p +"\n"+ newP +"\n"+ confirmP, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordUpdateActivity.this, response.body().getMsg() , Toast.LENGTH_SHORT).show();
                 }
 
             }

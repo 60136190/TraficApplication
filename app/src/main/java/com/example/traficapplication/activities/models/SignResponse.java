@@ -14,7 +14,7 @@ public class SignResponse {
     private Boolean success;
     @SerializedName("data")
     @Expose
-    private List<Sign> data = null;
+    private List<Sign> signList = null;
     @SerializedName("msg")
     @Expose
     private String msg;
@@ -36,11 +36,11 @@ public class SignResponse {
     }
 
     public List<Sign> getData() {
-        return data;
+        return signList;
     }
 
-    public void setData(List<Sign> data) {
-        this.data = data;
+    public void setData(List<Sign> signList) {
+        this.signList = signList;
     }
 
     public String getMsg() {

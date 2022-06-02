@@ -21,7 +21,7 @@ public interface UserApi {
     @GET("user/getProfile/{id}")
     Call<ProfileResponse> Profile(@Path("id") String id);
     @POST("user/register")
-    Call<ResponseDTO> Register(@Body UserRegister userRegister);
+    Call<LoginResponse> Register(@Body UserRegister userRegister);
     @PATCH("user/updateUser/{id}")
     Call<ResponseDTO> UpdateUser(@Body UserUpdate userUpdate, @Path("id") String id);
     @PATCH("user/changePassword/{id}")

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.activities.DocumentDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.auth.PasswordUpdateActivity"
             android:exported="false" />
         <activity

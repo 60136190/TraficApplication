@@ -15,31 +15,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.CarActivity;
+import com.example.traficapplication.activities.activities.DocumentDetailActivity;
+import com.example.traficapplication.activities.activities.DocumentsActivity;
 import com.example.traficapplication.activities.models.Document;
 import com.example.traficapplication.activities.models.Law;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.DocumentViewHolder> {
-
     private Context context;
     private List<Document> documents;
-
-
     public DocumentAdapter(Context context, ArrayList<Document> documents) {
         this.context = context;
         this.documents=documents;
         notifyDataSetChanged();
     }
-
     @NonNull
     @Override
     public DocumentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_document, parent, false);
         return new DocumentAdapter.DocumentViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull DocumentViewHolder holder, int position) {
         Document d = documents.get(position);
@@ -51,18 +47,15 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.Docume
         holder.detailDocument.setText(d.getDetailDocument());
         holder.tittleDocument.setText(d.getTittleDocument());
         holder.seekBarNumDocument.setText(String.valueOf(d.getSeekBarNum()));
-
-
-//        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, CarActivity.class);
-//                intent.putExtra("lawPos",String.valueOf(holder.getAdapterPosition()));
-//                context.startActivity(intent);
-//            }
-//        });
+        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DocumentDetailActivity.class);
+                intent.putExtra("lawPos",String.valueOf(holder.getAdapterPosition()));
+                context.startActivity(intent);
+            }
+        });
     }
-
     @Override
     public int getItemCount() {
         if (documents != null) {
@@ -70,7 +63,6 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.Docume
         }
         return 0;
     }
-
     public class DocumentViewHolder extends RecyclerView.ViewHolder{
         private ImageView imgDocument;
         private TextView tittleDocument;
@@ -78,7 +70,6 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.Docume
         private TextView seekBarNumDocument;
         private SeekBar seekBarDocument;
         private ConstraintLayout constraintLayout;
-
         public DocumentViewHolder(@NonNull View itemView) {
             super(itemView);
             imgDocument = itemView.findViewById(R.id.img_item_document);

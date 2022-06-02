@@ -1,5 +1,6 @@
 package com.example.traficapplication.activities.api;
 
+import com.example.traficapplication.activities.models.DetailResponse;
 import com.example.traficapplication.activities.models.SignResponse;
 
 import retrofit2.Call;
@@ -17,7 +18,7 @@ public interface SignApi {
     Call<SignResponse> getProhibitSign();
 
      @GET("trafficSign/getDetail/{id}")
-    Call<SignResponse> getDetail(@Path("id") String id);
+    Call<DetailResponse> getDetail(@Path("id") String id);
 
 
 

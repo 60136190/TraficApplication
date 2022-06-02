@@ -42,11 +42,11 @@
         />
     <SeekBar
         android:id="@+id/sb_item_document"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/img_item_document"
-        app:layout_constraintLeft_toRightOf="@id/img_item_document"
-        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_tittle_item_document"
+        app:layout_constraintRight_toLeftOf="@+id/tv_seekBarNum_item_document"
         />
     <TextView
         android:id="@+id/tv_seekBarNum_item_document"
