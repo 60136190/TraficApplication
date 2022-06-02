@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -17,7 +16,7 @@ import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.DocumentsActivity;
 import com.example.traficapplication.activities.activities.LawActivity;
 import com.example.traficapplication.activities.activities.NoteActivity;
-import com.example.traficapplication.activities.activities.SignalActivity;
+import com.example.traficapplication.activities.activities.SignActivity;
 import com.example.traficapplication.activities.activities.TestActivity;
 import com.example.traficapplication.activities.activities.TrickActivity;
 import com.example.traficapplication.activities.models.Function;
@@ -65,7 +64,7 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.Functi
                         context.startActivity(intent1);
                         break;
                     case 2:
-                        Intent intent2 = new Intent(context, SignalActivity.class);
+                        Intent intent2 = new Intent(context, SignActivity.class);
                         context.startActivity(intent2);
                         break;
                     case 3:

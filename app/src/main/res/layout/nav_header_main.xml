@@ -6,7 +6,8 @@
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

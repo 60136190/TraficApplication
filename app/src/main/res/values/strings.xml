@@ -12,4 +12,11 @@
     <string name="string_warning_user_data">Thông tin chưa được lưu! Bạn có muốn thoát!</string>
     <string name="string_back">Trở lại</string>
     <string name="string_save">Lưu</string>
+    <string name="userLogin">User</string>
+    <string name="stay">Ở lại</string>
+    <string name="log_out">Bạn có chắc chắn muôn đăng xuất?</string>
+    <string name="not_login">Bạn chưa có tài khoản vui lòng đăng nhập hoặc đăng kí! </string>
+    <string name="test">25 câu/ 19 phút</string>
+    <string name="Login">Đăng nhập</string>
+    <string name="Create">Đăng kí</string>
 </resources>
