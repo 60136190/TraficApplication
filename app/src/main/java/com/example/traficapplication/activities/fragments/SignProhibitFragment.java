@@ -64,7 +64,7 @@ public class SignProhibitFragment extends Fragment {
     }
 
     private void getIn4(){
-        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getProhibitSign();
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.signApi().getProhibitSign();
         responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
             public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {

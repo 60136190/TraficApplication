@@ -46,9 +46,10 @@ private ArrayAdapter<String> adapter;
                              Bundle savedInstanceState) {
         auxiliarySignalView = inflater.inflate(R.layout.fragment_sign_auxiliary, container, false);
         initUi();
+        getIn4();
         setRecylerView();
 
-        getIn4();
+
         search();
         return auxiliarySignalView;
     }
@@ -58,6 +59,8 @@ private ArrayAdapter<String> adapter;
         signAdapter = new SignAdapter(signs,this.auxiliarySignalView.getContext());
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.auxiliarySignalView.getContext(),layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(signAdapter);
     }
 
     private void initUi() {
@@ -65,12 +68,10 @@ private ArrayAdapter<String> adapter;
         edtSearch = auxiliarySignalView.findViewById(R.id.edt_search_auxiliary);
     }
     private void getIn4(){
-        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getAuxiliarySign();
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.signApi().getAuxiliarySign();
         responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
             public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {
-                recyclerView.setLayoutManager(layoutManager);
-                recyclerView.setAdapter(signAdapter);
                 signs.addAll(response.body().getData());
             }
             @Override
@@ -78,8 +79,6 @@ private ArrayAdapter<String> adapter;
                 Toast.makeText(getContext(), "Connecting... ", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
     private void search(){
         edtSearch.addTextChangedListener(new TextWatcher() {

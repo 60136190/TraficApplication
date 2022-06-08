@@ -3,7 +3,7 @@ package com.example.traficapplication.activities.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Category {
+public class SignCategory {
     @SerializedName("image")
     @Expose
     private SignImage__1 image;

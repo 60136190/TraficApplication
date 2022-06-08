@@ -58,7 +58,7 @@ public class SignCommandFragment extends Fragment {
         edtSearch = cmdSignalView.findViewById(R.id.edt_search_cmd);
     }
     private void getIn4(){
-        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getProhibitSign();
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.signApi().getCmdSign();
         responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
             public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {

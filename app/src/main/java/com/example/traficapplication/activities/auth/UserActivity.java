@@ -120,7 +120,7 @@ public class UserActivity extends AppCompatActivity {
     }
     private void getIn4(){
         String id = getSharedPreferences("MySharedPref",Context.MODE_PRIVATE).getString(Contants.id,"");
-        Call<ProfileResponse> responseDTOCall = ApiClient.User().Profile(id);
+        Call<ProfileResponse> responseDTOCall = ApiClient.userApi().Profile(id);
         responseDTOCall.enqueue(new Callback<ProfileResponse>() {
             @Override
             public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {

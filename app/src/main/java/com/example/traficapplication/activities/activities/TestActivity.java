@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.DocumentAdapter;
 import com.example.traficapplication.activities.adapters.TestAdapter;
-import com.example.traficapplication.activities.models.Document;
 import com.example.traficapplication.activities.models.Test;
 
 import java.util.ArrayList;

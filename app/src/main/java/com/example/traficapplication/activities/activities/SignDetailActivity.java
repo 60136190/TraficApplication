@@ -39,7 +39,7 @@ public class SignDetailActivity extends AppCompatActivity {
         tvSignCode = findViewById(R.id.tv_code_signal_detail);
     }
     private void getIn4( String id){
-        Call<DetailResponse> responseDTOCall = (Call<DetailResponse>) ApiClient.getApi().getDetail(id);
+        Call<DetailResponse> responseDTOCall = (Call<DetailResponse>) ApiClient.signApi().getDetail(id);
         responseDTOCall.enqueue(new Callback<DetailResponse>() {
             @Override
             public void onResponse(Call<DetailResponse> call, Response<DetailResponse> response) {

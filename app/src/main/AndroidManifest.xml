@@ -15,7 +15,7 @@
         android:theme="@style/Theme.TraficApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.activities.DocumentDetailActivity"
+            android:name=".activities.activities.QuestionActivity"
             android:exported="false" />
         <activity
             android:name=".activities.auth.PasswordUpdateActivity"
@@ -69,7 +69,7 @@
             android:name=".activities.activities.SignActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.activities.DocumentsActivity"
+            android:name=".activities.activities.QuestionCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activities.TestActivity"
