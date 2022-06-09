@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.LawItemAdapter;
+import com.example.traficapplication.activities.adapters.LawAdapter;
 import com.example.traficapplication.activities.models.ItemLaw;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class MotoActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private LawItemAdapter lawItemAdapter;
+    private LawAdapter lawAdapter;
     private ArrayList<ItemLaw> itemLaw = new ArrayList<>();
     private LinearLayoutManager layoutManager;
     @Override
@@ -49,12 +49,12 @@ public class MotoActivity extends AppCompatActivity {
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        lawItemAdapter = new LawItemAdapter(this,itemLaw);
-        recyclerView.setAdapter(lawItemAdapter);
+        lawAdapter = new LawAdapter(this,itemLaw);
+        recyclerView.setAdapter(lawAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
         defineAdapter();
-        lawItemAdapter.notifyDataSetChanged();
+        lawAdapter.notifyDataSetChanged();
     }
 
     private void initUi() {

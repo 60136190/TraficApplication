@@ -20,24 +20,24 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class LawItemAdapter extends RecyclerView.Adapter<LawItemAdapter.ItemLawViewHolder> {
+public class LawAdapter extends RecyclerView.Adapter<LawAdapter.ItemLawViewHolder> {
     private Context itemLawContext;
     private List<ItemLaw> itemLaw;
 
-    public LawItemAdapter(Context itemLawContext, List<ItemLaw> itemLaw) {
+    public LawAdapter(Context itemLawContext, List<ItemLaw> itemLaw) {
         this.itemLawContext = itemLawContext;
         this.itemLaw = itemLaw;
     }
 
     @NonNull
     @Override
-    public LawItemAdapter.ItemLawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public LawAdapter.ItemLawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_law, parent, false);
-        return new LawItemAdapter.ItemLawViewHolder(view);
+        return new LawAdapter.ItemLawViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LawItemAdapter.ItemLawViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LawAdapter.ItemLawViewHolder holder, int position) {
         ItemLaw itemL = itemLaw.get(position);
         int a = position;
         if (itemL == null) {

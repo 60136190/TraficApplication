@@ -11,18 +11,20 @@
        android:backgroundTint="@color/dark_white"
        android:background="@drawable/border_item_function"
        >
+
        <TextView
            android:id="@+id/tv_testing"
-           android:layout_width="wrap_content"
+           android:layout_width="0dp"
            android:layout_height="wrap_content"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintLeft_toLeftOf="parent"
-           app:layout_constraintRight_toRightOf="parent"
-           android:textStyle="bold"
+           android:layout_margin="10dp"
            android:textColor="@color/purple_800"
            android:textSize="15sp"
-           android:layout_margin="10dp"
-           />
+           android:textStyle="bold"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:textAlignment="center"
+           android:text="Nhắc nhở"/>
        <TextView
            android:id="@+id/tv_warning"
            android:layout_margin="10dp"

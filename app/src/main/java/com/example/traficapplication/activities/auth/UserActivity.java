@@ -99,6 +99,7 @@ public class UserActivity extends AppCompatActivity {
                 SharedPreferences email = UserActivity.this.getSharedPreferences("MySharedPref", 0);
                 email.edit().remove("email").commit();
                 email.edit().remove("id").commit();
+                email.edit().remove("position").commit();
                 finishAffinity();
             }
         });

@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.QuestionCategoryActivity;
 import com.example.traficapplication.activities.models.Question;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -55,11 +58,21 @@ import java.util.List;
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Question currenItem = questions.get(position);
-        ((QuestionViewHolder)holder).itemTitle.setText(currenItem.getQuestion());
+        Question currentItem = questions.get(position);
+        String nullUrl ="";
+        if (currentItem.getImage().getUrl().equals(nullUrl)){
+            ((QuestionViewHolder)holder).img.setVisibility(View.GONE);
+        }
+        else {
+            ((QuestionViewHolder)holder).img.setVisibility(View.VISIBLE);
+            String url = currentItem.getImage().getUrl();
+            Picasso.with(getContext())
+                    .load(url).fit().centerInside().into(((QuestionViewHolder)holder).img);
+        }
+        ((QuestionViewHolder)holder).itemTitle.setText(currentItem.getQuestion());
         ((QuestionViewHolder)holder).answer.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         ((QuestionViewHolder)holder).answer.setItemAnimator(new DefaultItemAnimator());
-        AnswerAdapter answerAdapter = new AnswerAdapter( context,currenItem.getAnswer());
+        AnswerAdapter answerAdapter = new AnswerAdapter( context,currentItem.getAnswer());
         ((QuestionViewHolder)holder).answer.setAdapter(answerAdapter);
     }
     @Override
@@ -73,8 +86,10 @@ import java.util.List;
     public class QuestionViewHolder extends RecyclerView.ViewHolder {
         private TextView itemTitle;
         private RecyclerView answer;
+        private ImageView img;
         public QuestionViewHolder(@NonNull View itemView) {
             super(itemView);
+            img = itemView.findViewById(R.id.img_quest);
             itemTitle = itemView.findViewById(R.id.tv_quest);
             answer = itemView.findViewById(R.id.answer);
         }

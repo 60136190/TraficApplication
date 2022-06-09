@@ -1,7 +1,5 @@
 package com.example.traficapplication.activities.adapters;
 
-import static com.example.traficapplication.R.color.green;
-import static com.example.traficapplication.R.color.red;
 import static com.example.traficapplication.R.drawable.background;
 
 import android.annotation.SuppressLint;
@@ -19,11 +17,12 @@ import com.example.traficapplication.R;
 import com.example.traficapplication.activities.models.Answer;
 import com.example.traficapplication.activities.models.Question;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.AnswerViewHolder> {
     private Context context;
-    List<Answer> answers ;
+    List<Answer> answers = new ArrayList<>();
 
     public AnswerAdapter(Context context, List<Answer> answers) {
         this.context = context;
@@ -46,12 +45,14 @@ public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.AnswerView
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                if (currentItem.getTrue() == "0") {
-                    holder.ans.setTextColor(red);
+                if (currentItem.getTrue().equals("0")) {
+                    holder.ans.setBackgroundResource(R.drawable.border_red);
                 } else{
-                    holder.ans.setTextColor(green);
+                    holder.ans.setBackgroundResource(R.drawable.border_green);
                 }
+
             }
+
         });
 
     }
