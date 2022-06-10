@@ -29,8 +29,10 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:backgroundTint="@color/black"
-            android:text="Previous"/>
+            android:backgroundTint="@color/purple_800"
+            android:text="Quay lại"
+            android:textColor="@color/dark_white"
+            />
 
         <TextView
             android:id="@+id/tv_count"
@@ -39,7 +41,8 @@
             android:gravity="center"
             android:layout_weight="1"
             android:textSize="14sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:text="⚲ Question"/>
 
         <Button
             android:id="@+id/btn_next"
@@ -48,7 +51,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:backgroundTint="@color/black"
-            android:text="Next"/>
+            android:backgroundTint="@color/purple_800"
+            android:text="Kế tiếp"
+            android:textColor="@color/dark_white"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

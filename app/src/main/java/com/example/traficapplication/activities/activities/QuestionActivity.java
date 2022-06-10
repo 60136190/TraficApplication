@@ -78,7 +78,7 @@ public class QuestionActivity extends AppCompatActivity {
         Bundle b = iin.getExtras();
         String id = (String) b.get("id");
         getData(id);
-        oldPos();
+
         mRecyclerView = findViewById(R.id.rcv_question);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -93,7 +93,7 @@ public class QuestionActivity extends AppCompatActivity {
 //                    tvCount.setText("Question " + (position+1) + " / " + list.size());
 //                }
                 int position = getCurrentItem();
-                tvCount.setText("Question " + (position+1) + " / " + questionAdapter.getItemCount());
+                tvCount.setText("Question\n"+"" + (position+1) + " / " + questionAdapter.getItemCount());
             }
         });
 
@@ -122,7 +122,7 @@ public class QuestionActivity extends AppCompatActivity {
 
             }
         });
-
+        oldPos();
     }
 
     private void initUi() {
@@ -185,14 +185,19 @@ public class QuestionActivity extends AppCompatActivity {
                 int count = adapter.getItemCount();
                 if (edt.equals(n))
                 {
-                    Toast.makeText(QuestionActivity.this,"Chưa chọn câu cần đến",Toast.LENGTH_SHORT).show();
+                    notInsert();
                 }
                 else {
                     int position =Integer.parseInt(edt);
                     if (position < (count))
                     {
-                        setCurrentItem(position+1, false);
-                        dialog.dismiss();
+                        if (position>0)
+                        {
+                            setCurrentItem(position-1, false);
+                            dialog.dismiss();
+                        }
+                        else notInsert();
+
                     }
                     else {
                         position = count;
@@ -204,6 +209,10 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
         dialog.show();
+
+    }
+    private void notInsert(){
+        Toast.makeText(QuestionActivity.this,"Chưa chọn câu cần đến",Toast.LENGTH_SHORT).show();
     }
     //// Mở lại câu cũ
     public void oldPos(){
