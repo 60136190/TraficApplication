@@ -94,7 +94,7 @@ public class PasswordUpdateActivity extends AppCompatActivity {
     }
     private void getIn4() {
         String id = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE).getString(Contants.id,"");
-        Call<ProfileResponse> responseDTOCall = ApiClient.User().Profile(id);
+        Call<ProfileResponse> responseDTOCall = ApiClient.userApi().Profile(id);
         responseDTOCall.enqueue(new Callback<ProfileResponse>() {
             @Override
             public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
@@ -137,7 +137,7 @@ public class PasswordUpdateActivity extends AppCompatActivity {
         String confirmP = String.valueOf(confirmPass.getText());
         PasswordUpdate passwordUpdate = new PasswordUpdate(p,newP,confirmP);
         String id = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE).getString(Contants.id,"");
-        Call<ResponseDTO> responseDTOCall = ApiClient.User().UpdatePass(passwordUpdate,id);
+        Call<ResponseDTO> responseDTOCall = ApiClient.userApi().UpdatePass(passwordUpdate,id);
         responseDTOCall.enqueue(new Callback<ResponseDTO>() {
             @Override
             public void onResponse(Call<ResponseDTO> call, Response<ResponseDTO> response) {

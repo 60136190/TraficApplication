@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
         phone = String.valueOf(edtPhone.getText());
         add = String.valueOf(edtAdd.getText());
         UserRegister userRegister = new UserRegister(mail,pass,name,phone,add);
-        Call<LoginResponse> responseDTOCall = (Call<LoginResponse>) ApiClient.User().Register(userRegister);
+        Call<LoginResponse> responseDTOCall = (Call<LoginResponse>) ApiClient.userApi().Register(userRegister);
         responseDTOCall.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {

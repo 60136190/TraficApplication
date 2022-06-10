@@ -18,9 +18,9 @@ public class Sign {
     @SerializedName("description")
     @Expose
     private String description;
-    @SerializedName("category")
+    @SerializedName("signCategory")
     @Expose
-    private Category category;
+    private SignCategory signCategory;
     @SerializedName("__v")
     @Expose
     private Integer v;
@@ -65,12 +65,12 @@ public class Sign {
         this.description = description;
     }
 
-    public Category getCategory() {
-        return category;
+    public SignCategory getCategory() {
+        return signCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategory(SignCategory signCategory) {
+        this.signCategory = signCategory;
     }
 
     public Integer getV() {

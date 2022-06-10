@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         String pass = edtPass.getText().toString();
 
         UserLogin userLogin1 = new UserLogin(mail,pass);
-        Call<LoginResponse> responseDTOCall = (Call<LoginResponse>) ApiClient.User().Login(userLogin1);
+        Call<LoginResponse> responseDTOCall = (Call<LoginResponse>) ApiClient.userApi().Login(userLogin1);
         responseDTOCall.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {

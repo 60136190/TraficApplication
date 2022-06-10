@@ -95,7 +95,7 @@ public class UserUpdateActivity extends AppCompatActivity {
     }
     private void getIn4() {
         String id = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE).getString(Contants.id,"");
-        Call<ProfileResponse> responseDTOCall = ApiClient.User().Profile(id);
+        Call<ProfileResponse> responseDTOCall = ApiClient.userApi().Profile(id);
         responseDTOCall.enqueue(new Callback<ProfileResponse>() {
             @Override
             public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
@@ -143,7 +143,7 @@ public class UserUpdateActivity extends AppCompatActivity {
         String add = String.valueOf(address.getText());
         UserUpdate userUpdate = new UserUpdate(mail,name,phone,add);
                 String id = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE).getString(Contants.id,"");
-                Call<ResponseDTO> responseDTOCall = ApiClient.User().UpdateUser(userUpdate,id);
+                Call<ResponseDTO> responseDTOCall = ApiClient.userApi().UpdateUser(userUpdate,id);
                 responseDTOCall.enqueue(new Callback<ResponseDTO>() {
                     @Override
                     public void onResponse(Call<ResponseDTO> call, Response<ResponseDTO> response) {

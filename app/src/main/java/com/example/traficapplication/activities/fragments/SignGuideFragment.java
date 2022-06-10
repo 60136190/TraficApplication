@@ -62,7 +62,7 @@ public class SignGuideFragment extends Fragment {
         edtSearch = guideSignalView.findViewById(R.id.edt_search_guide);
     }
     private void getIn4(){
-        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.getApi().getProhibitSign();
+        Call<SignResponse> responseDTOCall = (Call<SignResponse>) ApiClient.signApi().getGuidingSign();
         responseDTOCall.enqueue(new Callback<SignResponse>() {
             @Override
             public void onResponse(Call<SignResponse> call, Response<SignResponse> response) {

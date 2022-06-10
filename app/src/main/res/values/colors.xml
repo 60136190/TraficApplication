@@ -17,4 +17,10 @@
     <color name="dark_tangerine">#F7AD19</color>
     <color name="cerulean">#01689C</color>
     <color name="light_white">#FDFDFC</color>
+    <color name="red">#fe5454</color>
+    <color name="green">#20c579</color>
+    <color name="crimson">#D9114A</color>
+    <color name="lawn_green">#7CD202</color>
+    <color name="cyprus">#101D40</color>
+
 </resources>

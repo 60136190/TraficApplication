@@ -1,5 +1,6 @@
 package com.example.traficapplication.activities.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -46,7 +47,8 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
     @NonNull
     @Override
     public SignViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_traffic_sign, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_traffic_sign, parent, false);
         return new SignAdapter.SignViewHolder(view);
     }
     @Override

@@ -13,7 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.DocumentsActivity;
+import com.example.traficapplication.activities.activities.QuestionCategoryActivity;
 import com.example.traficapplication.activities.activities.LawActivity;
 import com.example.traficapplication.activities.activities.NoteActivity;
 import com.example.traficapplication.activities.activities.SignActivity;
@@ -38,7 +38,8 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.Functi
     @NonNull
     @Override
     public FunctionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).
+                inflate(R.layout.item_grid_view, parent, false);
         return new FunctionViewHolder(view);
     }
     @Override
@@ -60,7 +61,7 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.Functi
                         context.startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(context, DocumentsActivity.class);
+                        Intent intent1 = new Intent(context, QuestionCategoryActivity.class);
                         context.startActivity(intent1);
                         break;
                     case 2:

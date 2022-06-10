@@ -99,6 +99,7 @@ public class UserActivity extends AppCompatActivity {
                 SharedPreferences email = UserActivity.this.getSharedPreferences("MySharedPref", 0);
                 email.edit().remove("email").commit();
                 email.edit().remove("id").commit();
+                email.edit().remove("position").commit();
                 finishAffinity();
             }
         });
@@ -120,7 +121,7 @@ public class UserActivity extends AppCompatActivity {
     }
     private void getIn4(){
         String id = getSharedPreferences("MySharedPref",Context.MODE_PRIVATE).getString(Contants.id,"");
-        Call<ProfileResponse> responseDTOCall = ApiClient.User().Profile(id);
+        Call<ProfileResponse> responseDTOCall = ApiClient.userApi().Profile(id);
         responseDTOCall.enqueue(new Callback<ProfileResponse>() {
             @Override
             public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
