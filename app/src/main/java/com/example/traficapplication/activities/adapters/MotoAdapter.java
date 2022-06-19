@@ -14,31 +14,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.MotoActivity;
-import com.example.traficapplication.activities.models.Law;
+import com.example.traficapplication.activities.models.LawCategory;
 
 import java.util.List;
 
 public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder> {
     private Context context;
-    private List<Law> law;
+    private List<LawCategory> lawCategory;
 
     public MotoAdapter(Context context) {
         this.context = context;
     }
 
-    public void setData(List<Law> law) {
-        this.law = law;
+    public void setData(List<LawCategory> lawCategory) {
+        this.lawCategory = lawCategory;
         notifyDataSetChanged();
     }
     @NonNull
     @Override
     public MotoAdapter.LawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_type_law, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_law_category, parent, false);
         return new MotoAdapter.LawViewHolder(view);
     }
     @Override
     public void onBindViewHolder(@NonNull MotoAdapter.LawViewHolder holder, int position) {
-        Law l = law.get(position);
+        LawCategory l = lawCategory.get(position);
         int a = position;
         if (l == null) {
             return;
@@ -58,8 +58,8 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
     }
     @Override
     public int getItemCount() {
-        if (law != null) {
-            return law.size();
+        if (lawCategory != null) {
+            return lawCategory.size();
         }
         return 0;
     }
@@ -77,27 +77,27 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
     public void putValue(int a,Intent intent) {
         switch (a) {
             case 0:
-                intent.putExtra("law", 1);
+                intent.putExtra("lawCategory", 1);
             case 1:
-                intent.putExtra("law", 2);
+                intent.putExtra("lawCategory", 2);
             case 2:
-                intent.putExtra("law", 3);
+                intent.putExtra("lawCategory", 3);
             case 3:
-                intent.putExtra("law", 5);
+                intent.putExtra("lawCategory", 5);
             case 4:
-                intent.putExtra("law", 6);
+                intent.putExtra("lawCategory", 6);
             case 5:
-                intent.putExtra("law", 7);
+                intent.putExtra("lawCategory", 7);
             case 6:
-                intent.putExtra("law", 8);
+                intent.putExtra("lawCategory", 8);
             case 7:
-                intent.putExtra("law", 9);
+                intent.putExtra("lawCategory", 9);
             case 8:
-                intent.putExtra("law", 10);
+                intent.putExtra("lawCategory", 10);
             case 9:
-                intent.putExtra("law", 11);
+                intent.putExtra("lawCategory", 11);
             case 10:
-                intent.putExtra("law", 12);
+                intent.putExtra("lawCategory", 12);
 
         }
     }

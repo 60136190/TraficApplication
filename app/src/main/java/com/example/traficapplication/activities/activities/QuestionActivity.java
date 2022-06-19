@@ -24,18 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.MainActivity;
-import com.example.traficapplication.activities.adapters.QuestionAdapter;
+import com.example.traficapplication.activities.adapters.QuestionLearnAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
-import com.example.traficapplication.activities.auth.LoginActivity;
-import com.example.traficapplication.activities.models.Question;
 import com.example.traficapplication.activities.models.QuestionCategoryResponse;
-import com.example.traficapplication.activities.sliders.FirstActivity;
-import com.example.traficapplication.activities.sliders.SlideActivity;
 import com.example.traficapplication.activities.utils.Contants;
 import com.example.traficapplication.activities.utils.StoreUtils;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -44,13 +37,14 @@ import retrofit2.Response;
 public class QuestionActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-//    private List<Question> list;
-    private QuestionAdapter questionAdapter;
+
+    private QuestionLearnAdapter questionLearnAdapter;
     private Button btnPrevious;
     private Button btnNext;
     private TextView tvCount;
     private ImageView imgChange;
     private ImageView imgChanged;
+    //    private List<Question> list;
 
 //    boolean barIsShowing = true;
 
@@ -82,8 +76,8 @@ public class QuestionActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.rcv_question);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        questionAdapter = new QuestionAdapter(Question1Activity.this, list);
-//        mRecyclerView.setAdapter(questionAdapter);
+//        questionLearnAdapter = new QuestionLearnAdapter(Question1Activity.this, list);
+//        mRecyclerView.setAdapter(questionLearnAdapter);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -93,7 +87,7 @@ public class QuestionActivity extends AppCompatActivity {
 //                    tvCount.setText("Question " + (position+1) + " / " + list.size());
 //                }
                 int position = getCurrentItem();
-                tvCount.setText("Question\n"+"" + (position+1) + " / " + questionAdapter.getItemCount());
+                tvCount.setText("Question\n"+"" + (position+1) + " / " + questionLearnAdapter.getItemCount());
             }
         });
 
@@ -251,8 +245,8 @@ public class QuestionActivity extends AppCompatActivity {
         responseDTOCall.enqueue(new Callback<QuestionCategoryResponse>() {
             @Override
             public void onResponse(Call<QuestionCategoryResponse> call, Response<QuestionCategoryResponse> response) {
-                questionAdapter = new QuestionAdapter(QuestionActivity.this,response.body().getData());
-                mRecyclerView.setAdapter(questionAdapter);
+                questionLearnAdapter = new QuestionLearnAdapter(QuestionActivity.this,response.body().getData());
+                mRecyclerView.setAdapter(questionLearnAdapter);
             }
             @Override
             public void onFailure(Call<QuestionCategoryResponse> call, Throwable t) {

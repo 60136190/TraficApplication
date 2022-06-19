@@ -39,19 +39,19 @@ public class TrickActivity extends AppCompatActivity {
         itemAdd("Cấp phép","●Đường cấm dừng, cấm đỗ, cấm đi do UBND cấp tỉnh cấp.\n●Xe quá khổ, quá tải do: cơ quan quản lý đường bộ có thẩm quyền cấp phép");
         itemAdd("Nồng độ cồn","Người điều khiển xe mô tô, ô tô, xe máy kéo trên đường mà trong máu hoặc hơi thở có nồng độ cồn: Bị nghiêm cấm.");
         itemAdd("Khoảng cách an toàn tối thiểu","●35m nếu vận tốc lưu hành (V) = 60 (km/h)\n●55m nếu 60<V≤80\n●70m nếu 80<V≤100\n●100m nếu 100<V≤120\n●Dưới 60km/h: Chủ động và đảm bảo khoảng cách");
-        itemAdd("Hỏi về tuổi (T)","●Gắn máy: 16T (dưới 50 cm³\n●Mô tô + B1 + B2: 18T");
+        itemAdd("Hỏi về tuổi (T)","●Gắn máy: 16T (dưới 50 cm³)\n●Mô tô + B1 + B2: 18T");
         itemAdd("Trên đường cao tốc, trong đường hầm, đường vòng, đầu dốc, nơi tầm nhìn hạn chế","●Không được quay đầu xe, không được lùi, không vượt\n●Không được vượt trên cầu hẹp có một làn xe\n●Không được phép quay đầ xe ở phần đường dành cho người đi bộ qua đường.\n●Cấm lùi xe ở khu vực cấm dừng và nơi đường bộ giao nhau.");
         itemAdd("Tại nơi giao nhau không có tín hiệu đèn","●Có vòng xuyến: Nhường đường bên trái.\n●Không có vòng xuyến: Nhường đường bên phải.");
         itemAdd("Biển báo cấm", "Cấm ô tô (Gồm: mô tô ba bánh, xe lam, xe khách)\n⇒ Cấm xe tải ⇒ Cấm máy kéo\n⇒ Cấm rơ moóc, sơ mi rơ moóc.");
-        itemAdd("Nhất chớm, nhì ưu, tam đường tứ hướng","●NHất chớm: Xe nào tới vạch trước thì được đi trước.\n●Nhì ưu: Xe ưu tiên được đi trước.\nThứ tự xe ưu tiên: Hỏa - Sự - An - Thương\n(Cứu hỏa - Quân sự - Công an - Cứu thương - Hộ dê - Đoàn xe tang)." +
-                "\n●Tam đường: Xe ở đườn chính, đường ưu tiên.\n●Tứ hướng: Thứ tự hướng: Bên phải trống - Rẽ phải - Đi thẳng - Rẽ trái");
+        itemAdd("Nhất chớm, nhì ưu, tam đường tứ hướng","●Nhất chớm: Xe nào tới vạch trước thì được đi trước.\n●Nhì ưu: Xe ưu tiên được đi trước.\nThứ tự xe ưu tiên: Hỏa - Sự - An - Thương\n(Cứu hỏa - Quân sự - Công an - Cứu thương - Hộ dê - Đoàn xe tang)." +
+                "\n●Tam đường: Xe ở đường chính, đường ưu tiên.\n●Tứ hướng: Thứ tự hướng: Bên phải trống - Rẽ phải - Đi thẳng - Rẽ trái");
         itemAdd("Thứ tự ưu tiên với các xe ưu tiên: Hỏa - Sự - An - Thương","●Hỏa: Xe Cứu hỏa\n●Sự: Xe Quân sự\n●An: Xe Công an\n●Thương: Xe Cứu thương\n●Xe hộ đê, xe đi làm nhiệm vụ khẩn cấp\n●Đoàn xe tang");
         itemAdd("Các hạng giấy phép lái xe","●A1: Mô tô dưới 175 cm³ và xe ba bánh của người khuyết tật.\n●A2: Mô tô từ 175 cm³ trở lên.");
-        itemAdd("Phân nhóm biển báo hiệu bao gồm:","●Biển nguy hiểm (Hình tam giác vàng).\n●Biển cấm (Vòng tròn đỏ)\n●Biển hiệu lênh (Vòng tròn xanh).\n●Biển chỉ dẫn (Hình vuông hoặc chữ nhật xanh).\n●Biển phụ (Hình vuông hoặc chữ nhật trắng đen): Hiệu lực nằm ở biển phụ khi có đặt biển phụ.");
+        itemAdd("Phân nhóm biển báo hiệu bao gồm:","●Biển nguy hiểm (Hình tam giác vàng).\n●Biển cấm (Vòng tròn đỏ).\n●Biển hiệu lênh (Vòng tròn xanh).\n●Biển chỉ dẫn (Hình vuông hoặc chữ nhật xanh).\n●Biển phụ (Hình vuông hoặc chữ nhật trắng đen): Hiệu lực nằm ở biển phụ khi có đặt biển phụ.");
         itemAdd("Tốc độ tối đa TRONG khu vực đông dân cư","●60km/h: Đối với đường đôi hoặc đường một chiều có từ hai làn xe cơ giới trở lên.\n●50km/h: Đối với đường hai chiều hoặc đường một chiều có một làn xe cơ giới.");
         itemAdd("Tốc độ tối đa NGOÀI khu vực đông dân cư (trừ đường cao tốc)","Tốc độ tối đa cho phép đối với\n●Xe máy chuyên dụng, xe gắn máy (kể cả xe máy điện) và các loại xe tương tự trên đường bộ (trừ đường cao tốc): 40km/h \n●Tốc độ tối đa cho phép của các loại xe cơ giới, xe máy chuyên dùng trên đường cao tốc phải tuân thủ tốc độ tối đa, tốc độ tối thiểu và không vượt quá: 120km/h");
         itemAdd("Tăng số, giảm số","Tăng 1 Giảm 2 (giảm số chọn ý có từ “vù ga″).");
-        itemAdd("Phương tiện giao thông đường bộ","Bao gồm phương tiện giao thông cơ giới đường bộ và phương tiện giao thông thô sơ đường bộ");
+        itemAdd("Phương tiện giao thông đường bộ","Bao gồm phương tiện giao thông cơ giới đường bộ và phương tiện giao thông thô sơ đường bộ.");
         itemAdd("Phương tiện tham gia giao thông đường bộ","Gồm phương tiện giao thông đường bộ và xe máy chuyên dùng.");
         itemAdd("Xe máy chuyên dùng","Gồm xe máy thi công, xe máy nông nghiệp, lâm nghiệp và các loại xe đặc chủng khác sử dụng vào mục đích quốc phòng, an ninh có tham gia giao thông đường bộ.");
         itemAdd("Hiệu lệnh người điều khiển giao thông","●Giơ tay thẳng đứng: Tất cả dừng, trừ xe đã ở trong ngã tư được phép đi." +

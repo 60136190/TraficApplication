@@ -44,6 +44,7 @@
         android:textStyle="bold|italic"
         android:textSize="17sp"
         android:textColor="@color/purple_800"/>
+
     <TextView
         android:id="@+id/tv_signal_detail"
         android:layout_width="wrap_content"
@@ -55,7 +56,4 @@
         android:text="@string/string_detail"
         android:textColor="@color/purple_800"
         />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.LawAdapter;
-import com.example.traficapplication.activities.models.ItemLaw;
+import com.example.traficapplication.activities.models.Law;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ public class CarActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private LawAdapter lawAdapter;
-    private ArrayList<ItemLaw> itemLaw = new ArrayList<>();
+    private ArrayList<Law> law = new ArrayList<>();
     private LinearLayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +46,11 @@ public class CarActivity extends AppCompatActivity {
 
     }
 
+
     private void setRecylerView() {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        lawAdapter = new LawAdapter(this,itemLaw);
+        lawAdapter = new LawAdapter(this, law);
         recyclerView.setAdapter(lawAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
@@ -61,7 +62,7 @@ public class CarActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_list_car_law);
     }
     private void itemAdd(int img, String tittle, String content, String detail){
-        itemLaw.add(new ItemLaw(img,tittle,content,detail));
+        law.add(new Law(img,tittle,content,detail));
     }
 
 

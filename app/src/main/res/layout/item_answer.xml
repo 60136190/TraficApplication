@@ -13,7 +13,6 @@
         android:textColor="@color/cyprus"
         app:layout_constraintTop_toTopOf="parent"
         android:textStyle="italic"
-        android:background="@drawable/border_item_function"
         android:padding="10dp"
         />
 

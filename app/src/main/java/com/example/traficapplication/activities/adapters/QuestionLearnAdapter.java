@@ -6,27 +6,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.activities.QuestionCategoryActivity;
 import com.example.traficapplication.activities.models.Question;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-//public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder>
- public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+//public class QuestionLearnAdapter extends RecyclerView.Adapter<QuestionLearnAdapter.QuestionViewHolder>
+ public class QuestionLearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private Context context;
     List<Question> questions;
 
-    public QuestionAdapter(Context context, List<Question> questions) {
+    public QuestionLearnAdapter(Context context, List<Question> questions) {
         this.context = context;
         this.questions = questions;
     }
@@ -53,7 +50,7 @@ import java.util.List;
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_question,parent,false);
-        return new QuestionAdapter.QuestionViewHolder(view);
+        return new QuestionLearnAdapter.QuestionViewHolder(view);
     }
 
     @Override
@@ -72,8 +69,8 @@ import java.util.List;
         ((QuestionViewHolder)holder).itemTitle.setText(currentItem.getQuestion());
         ((QuestionViewHolder)holder).answer.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         ((QuestionViewHolder)holder).answer.setItemAnimator(new DefaultItemAnimator());
-        AnswerAdapter answerAdapter = new AnswerAdapter( context,currentItem.getAnswer());
-        ((QuestionViewHolder)holder).answer.setAdapter(answerAdapter);
+        AnswerLearnAdapter answerLearnAdapter = new AnswerLearnAdapter( context,currentItem.getAnswer());
+        ((QuestionViewHolder)holder).answer.setAdapter(answerLearnAdapter);
     }
     @Override
     public int getItemCount() {
