@@ -30,4 +30,8 @@ public class ApiClient {
         QuestionApi questionApi = getRetrofit().create(QuestionApi.class);
         return  questionApi;
     }
+    public static HistoryApi historyApi(){
+        HistoryApi historyApi = getRetrofit().create(HistoryApi.class);
+        return  historyApi;
+    }
 }

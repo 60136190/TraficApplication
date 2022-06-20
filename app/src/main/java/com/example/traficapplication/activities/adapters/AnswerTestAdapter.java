@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.models.Answer;
+import com.example.traficapplication.activities.models.AnswerAll;
 import com.example.traficapplication.activities.utils.StoreUtils;
 
 import java.util.ArrayList;
@@ -27,11 +28,11 @@ import java.util.List;
 
 public class AnswerTestAdapter extends RecyclerView.Adapter<AnswerTestAdapter.AnswerViewHolder> {
     private Context context;
-    List<Answer> answers = new ArrayList<>();
+    List<AnswerAll> answers = new ArrayList<>();
 
     private int checkedPosition =0;
 
-    public AnswerTestAdapter(Context context, List<Answer> answers) {
+    public AnswerTestAdapter(Context context, List<AnswerAll> answers) {
         this.context = context;
         this.answers = answers;
         notifyDataSetChanged();
@@ -65,7 +66,7 @@ public class AnswerTestAdapter extends RecyclerView.Adapter<AnswerTestAdapter.An
             ans = itemView.findViewById(R.id.tv_answer);
             constraintLayout = itemView.findViewById(R.id.parent_answer);
         }
-        void bind(final Answer answer){
+        void bind(final AnswerAll answer){
             ans.setText(String.valueOf(answer.getTitle()));
             ans.setBackgroundResource(border_white);
             itemView.setOnClickListener(new View.OnClickListener() {

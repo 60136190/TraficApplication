@@ -28,9 +28,17 @@ import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.QuestionLearnAdapter;
 import com.example.traficapplication.activities.adapters.QuestionTestAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
+import com.example.traficapplication.activities.models.Question;
+import com.example.traficapplication.activities.models.QuestionAll;
+import com.example.traficapplication.activities.models.QuestionAllResponse;
 import com.example.traficapplication.activities.models.QuestionCategoryResponse;
 import com.example.traficapplication.activities.utils.Contants;
 import com.example.traficapplication.activities.utils.StoreUtils;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -44,6 +52,8 @@ public class TestDoingActivity extends AppCompatActivity {
     private Button btnNext;
     private TextView tvCount,tvTime;
     private long backPressTime;
+    private List<QuestionAll> questionAlls = new ArrayList<>();
+    private List<QuestionAll> questions = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -322,15 +332,21 @@ public class TestDoingActivity extends AppCompatActivity {
     }
     /////Lấy câu hỏi
     private void getData() {
-        Call<QuestionCategoryResponse> responseDTOCall = (Call<QuestionCategoryResponse>) ApiClient.questionApi().getChapter("629c40d5d25db7c7fe473471");
-        responseDTOCall.enqueue(new Callback<QuestionCategoryResponse>() {
+        Call<QuestionAllResponse> responseDTOCall = (Call<QuestionAllResponse>) ApiClient.questionApi().getAllQuestion();
+        responseDTOCall.enqueue(new Callback<QuestionAllResponse>() {
             @Override
-            public void onResponse(Call<QuestionCategoryResponse> call, Response<QuestionCategoryResponse> response) {
-                questionLearnAdapter = new QuestionTestAdapter(TestDoingActivity.this,response.body().getData());
+            public void onResponse(Call<QuestionAllResponse> call, Response<QuestionAllResponse> response) {
+                questionLearnAdapter = new QuestionTestAdapter(TestDoingActivity.this,questions);
+                questionAlls.addAll(response.body().getData());
+                Collections.shuffle(questionAlls);
+                for (int i =0;i<25;i++)
+                {
+                    questions.add(questionAlls.get(i));
+                }
                 mRecyclerView.setAdapter(questionLearnAdapter);
             }
             @Override
-            public void onFailure(Call<QuestionCategoryResponse> call, Throwable t) {
+            public void onFailure(Call<QuestionAllResponse> call, Throwable t) {
                 Toast.makeText(TestDoingActivity.this, "Connecting... ", Toast.LENGTH_SHORT).show();
             }
         });

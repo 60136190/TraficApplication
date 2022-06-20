@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class QuestionAllResponse {
+public class TestHistoryResponse {
     @SerializedName("status")
     @Expose
     private Integer status;
@@ -20,7 +20,7 @@ public class QuestionAllResponse {
     private Integer count;
     @SerializedName("data")
     @Expose
-    private List<QuestionAll> data = null;
+    private List<TestHistory> data = null;
 
     public Integer getStatus() {
         return status;
@@ -54,13 +54,11 @@ public class QuestionAllResponse {
         this.count = count;
     }
 
-    public List<QuestionAll> getData() {
+    public List<TestHistory> getData() {
         return data;
     }
 
-    public void setData(List<QuestionAll> data) {
+    public void setData(List<TestHistory> data) {
         this.data = data;
     }
-
-
 }

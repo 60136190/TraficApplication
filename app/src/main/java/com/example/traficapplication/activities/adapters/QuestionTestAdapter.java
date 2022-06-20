@@ -13,16 +13,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
+import com.example.traficapplication.activities.models.AnswerAll;
 import com.example.traficapplication.activities.models.Question;
+import com.example.traficapplication.activities.models.QuestionAll;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class QuestionTestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         private Context context;
-        List<Question> questions;
+        List<QuestionAll> questions;
 
-    public QuestionTestAdapter(Context context, List<Question> questions) {
+    public QuestionTestAdapter(Context context, List<QuestionAll> questions) {
             this.context = context;
             this.questions = questions;
         }
@@ -35,11 +40,11 @@ public class QuestionTestAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             this.context = context;
         }
 
-        public List<Question> getQuestions() {
+        public List<QuestionAll> getQuestions() {
             return questions;
         }
 
-        public void setQuestions(List<Question> questions) {
+        public void setQuestions(List<QuestionAll> questions) {
             this.questions = questions;
         }
 
@@ -56,7 +61,8 @@ public class QuestionTestAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-            Question currentItem = questions.get(position);
+        List<AnswerAll> ans =new ArrayList<>();
+            QuestionAll currentItem = questions.get(position);
             String nullUrl ="";
             if (currentItem.getImage().getUrl().equals(nullUrl)){
                 ((QuestionTestAdapter.QuestionViewHolder)holder).img.setVisibility(View.GONE);
@@ -70,7 +76,9 @@ public class QuestionTestAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             ((QuestionTestAdapter.QuestionViewHolder)holder).itemTitle.setText(currentItem.getQuestion());
             ((QuestionTestAdapter.QuestionViewHolder)holder).answer.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
             ((QuestionTestAdapter.QuestionViewHolder)holder).answer.setItemAnimator(new DefaultItemAnimator());
-            AnswerTestAdapter answerLearnAdapter = new AnswerTestAdapter( context,currentItem.getAnswer());
+            ans.addAll(currentItem.getAnswer());
+        Collections.shuffle(ans);
+            AnswerTestAdapter answerLearnAdapter = new AnswerTestAdapter( context,ans);
             ((QuestionTestAdapter.QuestionViewHolder)holder).answer.setAdapter(answerLearnAdapter);
 
         }

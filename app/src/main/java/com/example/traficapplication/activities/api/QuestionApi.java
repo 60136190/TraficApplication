@@ -13,7 +13,7 @@ public interface QuestionApi {
     Call<QuestionCategoryAllResponse> getAllQuestionCategories();
     @GET("learn/getLearnFollowIdCategory/{id}")
     Call<QuestionCategoryResponse> getChapter(@Path("id") String id);
-//    @GET("learn/getAll")
-//    Call<QuestionAllResponse> getAllQuestion();
+    @GET("learn/getAll")
+    Call<QuestionAllResponse> getAllQuestion();
 
 }
