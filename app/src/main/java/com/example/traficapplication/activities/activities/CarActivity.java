@@ -40,13 +40,13 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_4, "Điều khiển xe lạng lách, đánh võng không chấp hành hiệu lệnh dừng xe của người thi hành công vụ hoặc gây tai nạn giao thông ", "Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng.", "cascas");
             itemAdd(R.drawable.img_5, "Điều khiển xe ô tô có tay lái bên phải, xe ô tô của người nước ngoài vào Việt Nam du lịch tham gia giao thông mà không có xe dẫn đường theo quy định", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_2, "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường khi đi qua đường ngang, cầu chung", "Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
-            itemAdd(R.drawable.img_6, "Vượt đường ngang, cầu chung khi đèn đỏ đã bật sáng", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng.", "cascas");
+            itemAdd(R.drawable.img_1, "Vượt đường ngang, cầu chung khi đèn đỏ đã bật sáng", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng.", "cascas");
 
         }
             if (b.get("lawPos").equals("1")) {
                 itemAdd(R.drawable.img_2, "Chuyển làn đường không đúng nơi cho phép hoặc không có tín hiệu báo trước", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
                 itemAdd(R.drawable.img_5, "Không tuân thủ các quy định về nhường đường tại nơi đường bộ giao nhau", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
-                itemAdd(R.drawable.img_6, "Quay đầu xe trái quy định trong khu dân cư", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
+                itemAdd(R.drawable.img_1, "Quay đầu xe trái quy định trong khu dân cư", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
                 itemAdd(R.drawable.img_1, "Quay đầu xe ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu câu, ngâm, gầm cầu vượt", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
                 itemAdd(R.drawable.img_3, "Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ", " Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
                 itemAdd(R.drawable.img_3, "Chuyển hướng không giảm tốc độ hoặc không có tín hiệu báo hướng rẽ", " Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
@@ -56,7 +56,7 @@ public class CarActivity extends AppCompatActivity {
         if (b.get("lawPos").equals("2")){
             itemAdd(R.drawable.img_2, "Khi dừng xe, đỗ xe không có tín hiệu báo cho người điều khiển phương tiện khác biệt", " Phạt tiền từ 200.000 đồng đến 400.000 đồng", "cascas");
             itemAdd(R.drawable.img_5, "Khi đỗ xe chiếm một phần đường xe chạy không đặt ngay báo hiệu nguy hiểm theo quy định. ", "Phạt tiền từ 200.000 đồng đến 400.000 đồng ", "cascas");
-            itemAdd(R.drawable.img_6, "Dừng xe, đỗ xe trên phần đường xe chạy ở đoạn đường ngoài đô thị nơi có lề đường rộng", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
+            itemAdd(R.drawable.img_1, "Dừng xe, đỗ xe trên phần đường xe chạy ở đoạn đường ngoài đô thị nơi có lề đường rộng", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
             itemAdd(R.drawable.img_1, "Dừng xe, đỗ xe không sát mép đường phía bên phải theo chiều đi ở nơi đường có lề đường hẹp hoặc không có lề đường", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
             itemAdd(R.drawable.img_3, "Dừng xe, đỗ xe ngược với chiều lưu thông của làn đường ", " Phạt tiền từ 400.000 đồng đến 600.000 đồng ", "cascas");
             itemAdd(R.drawable.img_2, "Khi dừng xe, đỗ xe không có tín hiệu báo cho người điều khiển phương tiện khác biết", "Phạt tiền từ 200.000 đồng đến 400.000 đồng", "cascas");
@@ -64,7 +64,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_3, "Dừng xe, đỗ xe trên phần đường xe chạy ở đoạn đường ngoài đô thị nơi có lề đường rộng ", " Phạt tiền từ 200.000 đồng đến 400.000 đồng", "cascas");
             itemAdd(R.drawable.img_4, "Phạt tiền từ 400.000 đồng đến 600.000 đồng Xem chi tiết Dừng xe, đỗ xe không sát mép đường phía bên phải theo chiều đi ở nơi đường có lề đường hẹp hoặc không có lề đường", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
             itemAdd(R.drawable.img_5, "Dừng xe, đỗ xe ngược với chiều lưu thông của làn đường", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
-            itemAdd(R.drawable.img_6, "Dừng xe, đỗ xe trên dải phân cách cố định ở giữa hai phần đường xe chạy", " Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
+            itemAdd(R.drawable.img_1, "Dừng xe, đỗ xe trên dải phân cách cố định ở giữa hai phần đường xe chạy", " Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
 
         }
         if (b.get("lawPos").equals("3")){
@@ -73,7 +73,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_3, "Xe được quyền ưu tiên lắp đặt, sử dụng thiết bị phát tín hiệu ưu tiên không đúng quy định hoặc sử dụng thiết bị phát tín hiệu ưu tiên mà không có giấy CẢNH BÁO phép của cơ quan có thẩm quyền cấp hoặc có giấy phép của cơ quan có CẢNH BÁO thẩm quyền cấp nhưng không còn giá trị sử dụng", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
             itemAdd(R.drawable.img_4, "Bấm còi, rú ga liên tục", "Phạt tiền từ 800.000 đồng đến 1.000.000 đồng ", "cascas");
             itemAdd(R.drawable.img_5, "Bấm còi hơi, sử dụng đèn chiếu xa trong đô thị, khu đông dân cư ", "Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
-            itemAdd(R.drawable.img_6, "Không có báo hiệu để người lái xe khác biết khi buộc phải dừng xe, đỗ xe trên đường cao tốc không đúng nơi quy đinh", "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng ", "cascas");
+            itemAdd(R.drawable.img_1, "Không có báo hiệu để người lái xe khác biết khi buộc phải dừng xe, đỗ xe trên đường cao tốc không đúng nơi quy đinh", "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng ", "cascas");
             itemAdd(R.drawable.img_2, "Điều khiển xe lắp đặt, sử dụng còi vượt quá âm lượng theo quy định", "Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng", "cascas");
 
         }
@@ -83,7 +83,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_3, "Không giữ khoảng cách an toàn để xảy ra va chạm với xe chạy trước hoặc không giữ khoảng cách theo quy định của biển báo hiệu “Cự ly tối thiểu giữa hai xe", "Phạt tiền từ 800.000 đồng đến 1.000.000 đồng ", "cascas");
             itemAdd(R.drawable.img_4, "Không giảm tốc độ và nhường đường khi điều khiển xe chạy từ trong ngõ, đường nhánh ra đường chính", " Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_5, "Điều khiển xe chạy dưới tốc độ tối thiểu trên những đoạn đường bộ có quy định tốc độ tối thiểu cho phép", " Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
-            itemAdd(R.drawable.img_6, "Điều khiển xe chạy ở làn dừng xe khẩn cấp hoặc phần lề đường của đường cao tốc", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng", "cascas");
+            itemAdd(R.drawable.img_1, "Điều khiển xe chạy ở làn dừng xe khẩn cấp hoặc phần lề đường của đường cao tốc", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_2, "Không tuân thủ quy định về khoảng cách an toàn đối với xe chạy liền trước khi chạy trên đường cao tốc", "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_3, "Điều khiển xe chạy quá tốc độ quy định từ 10 km/h đến 20 km/h ", " Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_1, "Điều khiển xe chạy quá tốc độ quy định trên 20 km/h đến 35 km/h", "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng", "cascas");
@@ -101,7 +101,7 @@ public class CarActivity extends AppCompatActivity {
 
         }
         if (b.get("lawPos").equals("6")){
-            itemAdd(R.drawable.img_6, "Tự ý cắt, hàn, đục lại số khung, số máy xe ô tô và các loại xe tương tự xe ô tô ", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức. ", "cascas");
+            itemAdd(R.drawable.img_1, "Tự ý cắt, hàn, đục lại số khung, số máy xe ô tô và các loại xe tương tự xe ô tô ", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức. ", "cascas");
             itemAdd(R.drawable.img_2, "Đưa xe ô tô và các loại xe tương tự xe ô tô đã bị cắt, hàn, đục lại số khung, số máy trái quy định tham gia giao thông", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức", "cascas");
             itemAdd(R.drawable.img_3, "Không thực hiện đúng quy định về biển số, quy định về kẻ chữ trên thành xe và cửa xe ô tô và các loại xe tương tự xe ô tô", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức. ", "cascas");
             itemAdd(R.drawable.img_2, "Bán biển số xe ô tô và các loại xe tương tự xe ô tô không phải là biển số do cơ quan nhà nước có thẩm quyền sản xuất hoặc không được cơ quan nhà nước cấp phép", "Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với cá nhân, từ 2.000.000 đồng đến 4.000.000 đồng", "cascas");
@@ -128,7 +128,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_3, " Không làm thủ tục đăng ký sang tên xe (để chuyển tên chủ xe trong Giấy đăng ký xe sang tên của mình) theo quy định khi mua, được cho, được tặng, được phân bố, được điều chuyển, được thừa kế tài sản là xe ô tô và các loại xe tương tư xe ô tô", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức.", "cascas");
             itemAdd(R.drawable.img_4, "Không làm thủ tục khai báo với cơ quan đăng ký xe theo quy định trước khi cải tạo xe ô tô và các loại xe tương tự xe ô tô", "Phạt tiền từ 300.000 đồng đến 400.000 đồng đối với cá nhân, từ 600.000 đồng đến 800.000 đồng đối với tổ chức ", "cascas");
             itemAdd(R.drawable.img_5, "Tẩy xóa hoặc sửa chữa hồ sơ đăng ký xe ô tô và các loại xe tương tự xe ô tô", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức.", "cascas");
-            itemAdd(R.drawable.img_6, "Không chấp hành việc thu hồi Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường xe ô tô và các loại xe tương tự xe ô tô ", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức", "cascas");
+            itemAdd(R.drawable.img_1, "Không chấp hành việc thu hồi Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường xe ô tô và các loại xe tương tự xe ô tô ", "Phạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với chủ xe là cá nhân. Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với chủ xe là tổ chức", "cascas");
             itemAdd(R.drawable.img_2, "Có giấy phép lái xe nhưng không phù hợp với xe đang điều khiển ", "Phạt tiền từ 3.000.000 đồng đến 4.000.000 đồng", "cascas");
 
         }
@@ -138,7 +138,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_3, "Chở người trên xe ô tô không thắt dây an toàn (tại vị trí có trang bị dây an toàn) khi xe đang chạy", "Phạt tiền từ 800.000 đồng đến 1.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_4, "Dùng tay sử dụng điện thoại di động khi đang điều khiển xe chạy trên đường", "Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_5, "Không thực hiện biện pháp bảo đảm an toàn theo quy định khi xe ô tô bị hư. hỏng ngay tại nơi đường bộ giao nhau cùng mức với đường sắt ", "Phạt tiền từ 1.000.000 đồng ", "cascas");
-            itemAdd(R.drawable.img_6, "Điều khiển xe có liên quan trực tiếp đến vụ tai nạn giao thông mà không dừng lại, không giữ nguyên hiện trường, không tham gia cấp cứu người bi nan", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
+            itemAdd(R.drawable.img_1, "Điều khiển xe có liên quan trực tiếp đến vụ tai nạn giao thông mà không dừng lại, không giữ nguyên hiện trường, không tham gia cấp cứu người bi nan", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
         }
     }
 

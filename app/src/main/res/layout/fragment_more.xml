@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.traficapplication.activities.fragments.SettingFragment"
+    android:background="@color/dark_white"
+    tools:context="com.example.traficapplication.activities.fragments.MoreFragment"
     >
     <TextView
+        android:textColor="@color/grey"
         android:id="@+id/text_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="This is Setting fragment"/>
+        android:text="This is Setting fragment"
+        android:textStyle="italic"
+        android:padding="7dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

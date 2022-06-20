@@ -35,16 +35,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class QuestionActivity extends AppCompatActivity {
+
     private RecyclerView mRecyclerView;
+
     private QuestionLearnAdapter questionLearnAdapter;
     private Button btnPrevious;
     private Button btnNext;
     private TextView tvCount;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+
         initUi();
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -59,6 +63,7 @@ public class QuestionActivity extends AppCompatActivity {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
+
                 int position = getCurrentItem();
                 tvCount.setText("Question\n"+"" + (position+1) + " / " + questionLearnAdapter.getItemCount());
             }
@@ -96,6 +101,16 @@ public class QuestionActivity extends AppCompatActivity {
         btnPrevious = findViewById(R.id.btn_previous);
         btnNext = findViewById(R.id.btn_next);
         tvCount = findViewById(R.id.tv_count);
+    }
+
+
+    public boolean hasPreview() {
+        return getCurrentItem() > 0;
+    }
+
+    public boolean hasNext() {
+        return mRecyclerView.getAdapter() != null &&
+                getCurrentItem() < (mRecyclerView.getAdapter().getItemCount() - 1);
     }
 
     public void preview() {
