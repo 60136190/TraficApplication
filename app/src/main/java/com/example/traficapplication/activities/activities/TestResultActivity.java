@@ -44,18 +44,14 @@ public class TestResultActivity extends AppCompatActivity {
     private Button btnSave;
     private int mark = listId.size();
     private TestHistoryAdapter testHistoryAdapter;
-    private List<TestHistory> histories ;
-    private List<TestHistory> userHistories = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_history);
-        histories = new ArrayList<>();
         initUI();
         getAct();
         callHistory();
-
         linearLayoutManager = new LinearLayoutManager(TestResultActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
 

@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.adapters.TestAdapter;
 import com.example.traficapplication.activities.adapters.TrickAdapter;
-import com.example.traficapplication.activities.models.Test;
 import com.example.traficapplication.activities.models.Trick;
 
 import java.util.ArrayList;
@@ -75,7 +73,6 @@ public class TrickActivity extends AppCompatActivity {
         itemAdd("Kỹ thuật lái xe","●Xe mô tô xuống dốc dài cần sử dụng cả phanh trước và phanh sau để giảm tốc độ.\n●Thực hiện quay đầu xe với tốc độ thấp.");
         itemAdd("Các quy tắc sa hình khác","●Thứ tự ưu tiên không vòng xuyến: Xe vào ngã ba, ngã tư trước - Xe ưu tiên - Đường ưu tiên - Đường cùng cấp theo thứ tự bên phải trồng - rẽ phải - đi thẳng - rẽ trái.\n●Giao nhau cùng cấp có vòng xuyến: Chưa vào vòng xuyến thì ưu tiên xe bên phải, đã vào vòng xuyến ưu tiên xe từ bên trái tới.\n●Xe xuống dốc phải nhường đường cho xe đang lên dốc.");
         trickAdapter.notifyDataSetChanged();
-
     }
 
     private void initUi() {

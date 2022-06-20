@@ -18,18 +18,22 @@ public class ApiClient {
                 .build();
         return retrofit;
     }
+
     public static SignApi signApi(){
         SignApi signApi = getRetrofit().create(SignApi.class);
         return signApi;
     }
+
     public static UserApi userApi(){
         UserApi userApi = getRetrofit().create(UserApi.class);
         return  userApi;
     }
+
     public static QuestionApi questionApi(){
         QuestionApi questionApi = getRetrofit().create(QuestionApi.class);
         return  questionApi;
     }
+
     public static HistoryApi historyApi(){
         HistoryApi historyApi = getRetrofit().create(HistoryApi.class);
         return  historyApi;

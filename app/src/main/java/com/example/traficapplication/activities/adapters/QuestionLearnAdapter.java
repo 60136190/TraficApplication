@@ -18,7 +18,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-//public class QuestionLearnAdapter extends RecyclerView.Adapter<QuestionLearnAdapter.QuestionViewHolder>
  public class QuestionLearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private Context context;
     List<Question> questions;
@@ -36,13 +35,6 @@ import java.util.List;
         this.context = context;
     }
 
-    public List<Question> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<Question> questions) {
-        this.questions = questions;
-    }
 
 
     @NonNull

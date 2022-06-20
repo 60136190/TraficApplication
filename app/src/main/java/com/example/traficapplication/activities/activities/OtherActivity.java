@@ -31,7 +31,7 @@ public class OtherActivity extends AppCompatActivity {
 
 
 
-    private void defineAdapter() {
+    private void defineItem() {
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b.get("lawPos").equals("0")) {
@@ -68,7 +68,6 @@ public class OtherActivity extends AppCompatActivity {
         }
         if (b.get("lawPos").equals("10")){
             other();
-            //            itemAdd(R.drawable.img,"","","");
         }
 
 
@@ -319,7 +318,7 @@ public class OtherActivity extends AppCompatActivity {
         recyclerView.setAdapter(lawAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
-        defineAdapter();
+        defineItem();
         lawAdapter.notifyDataSetChanged();
     }
 

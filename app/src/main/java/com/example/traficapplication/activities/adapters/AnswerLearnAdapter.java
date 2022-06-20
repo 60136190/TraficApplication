@@ -22,7 +22,7 @@ import java.util.List;
 
 public class AnswerLearnAdapter extends RecyclerView.Adapter<AnswerLearnAdapter.AnswerViewHolder> {
     private Context context;
-    List<Answer> answers = new ArrayList<>();
+    List<Answer> answers ;
     private int checkedPosition =0;
 
     public AnswerLearnAdapter(Context context, List<Answer> answers) {
@@ -88,10 +88,5 @@ public class AnswerLearnAdapter extends RecyclerView.Adapter<AnswerLearnAdapter.
             });
         }
     }
-    public Answer getSelected(){
-        if (checkedPosition!=-1){
-            return answers.get(checkedPosition);
-        }
-        return null;
-    }
+
 }

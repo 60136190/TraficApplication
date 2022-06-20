@@ -1,7 +1,6 @@
 package com.example.traficapplication.activities.adapters;
 
 import android.content.Context;
-import android.opengl.Matrix;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +17,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.models.Test;
 import com.example.traficapplication.activities.models.Trick;
 
 import java.util.ArrayList;
@@ -92,7 +89,7 @@ public class TrickAdapter extends RecyclerView.Adapter<TrickAdapter.TrickViewHol
     }
 
     public class TrickViewHolder extends RecyclerView.ViewHolder{
-        private ImageView imgDown,imgUp;
+        private ImageView imgDown;
         private TextView tittleTrick;
         private  TextView detailTrick;
         private ConstraintLayout constraintLayout;

@@ -26,7 +26,6 @@ public class CarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_car);
         initUi();
         setRecylerView();
-
     }
 
 
@@ -140,12 +139,7 @@ public class CarActivity extends AppCompatActivity {
             itemAdd(R.drawable.img_4, "Dùng tay sử dụng điện thoại di động khi đang điều khiển xe chạy trên đường", "Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng", "cascas");
             itemAdd(R.drawable.img_5, "Không thực hiện biện pháp bảo đảm an toàn theo quy định khi xe ô tô bị hư. hỏng ngay tại nơi đường bộ giao nhau cùng mức với đường sắt ", "Phạt tiền từ 1.000.000 đồng ", "cascas");
             itemAdd(R.drawable.img_6, "Điều khiển xe có liên quan trực tiếp đến vụ tai nạn giao thông mà không dừng lại, không giữ nguyên hiện trường, không tham gia cấp cứu người bi nan", "Phạt tiền từ 400.000 đồng đến 600.000 đồng", "cascas");
-
         }
-
-
-
-
     }
 
 

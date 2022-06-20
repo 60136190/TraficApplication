@@ -51,8 +51,8 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
             public void onClick(View view) {
                 Intent intent = new Intent(context, MotoActivity.class);
                 intent.putExtra("lawPos",String.valueOf(holder.getAdapterPosition()));
-                putValue(a,intent);
                 context.startActivity(intent);
+
             }
         });
     }
@@ -74,31 +74,6 @@ public class MotoAdapter extends RecyclerView.Adapter<MotoAdapter.LawViewHolder>
             constraintLayout = itemView.findViewById(R.id.item_type_law);
         }
     }
-    public void putValue(int a,Intent intent) {
-        switch (a) {
-            case 0:
-                intent.putExtra("lawCategory", 1);
-            case 1:
-                intent.putExtra("lawCategory", 2);
-            case 2:
-                intent.putExtra("lawCategory", 3);
-            case 3:
-                intent.putExtra("lawCategory", 5);
-            case 4:
-                intent.putExtra("lawCategory", 6);
-            case 5:
-                intent.putExtra("lawCategory", 7);
-            case 6:
-                intent.putExtra("lawCategory", 8);
-            case 7:
-                intent.putExtra("lawCategory", 9);
-            case 8:
-                intent.putExtra("lawCategory", 10);
-            case 9:
-                intent.putExtra("lawCategory", 11);
-            case 10:
-                intent.putExtra("lawCategory", 12);
 
-        }
-    }
+
 }

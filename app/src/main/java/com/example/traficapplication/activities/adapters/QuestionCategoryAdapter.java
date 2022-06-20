@@ -29,13 +29,6 @@ public class QuestionCategoryAdapter extends RecyclerView.Adapter<QuestionCatego
         this.context = context;
     }
 
-    public List<QuestionCategory> getQuestionCategories() {
-        return questionCategories;
-    }
-
-    public void setQuestionCategories(List<QuestionCategory> questionCategories) {
-        this.questionCategories = questionCategories;
-    }
 
     public Context getContext() {
         return context;
@@ -58,7 +51,6 @@ public class QuestionCategoryAdapter extends RecyclerView.Adapter<QuestionCatego
         String url = currentItem.getImage().getUrl();
         Picasso.with(getContext())
                 .load(url).fit().centerInside().into(holder.imgDocument);
-//        holder.numQuest.setText(currentItem.ge);
         holder.tittleDocument.setText(currentItem.getName());
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,18 +74,12 @@ public class QuestionCategoryAdapter extends RecyclerView.Adapter<QuestionCatego
     public class QuestionCategoryViewHolder extends RecyclerView.ViewHolder {
         private ImageView imgDocument;
         private TextView tittleDocument;
-        private  TextView numQuest;
-        private TextView seekBarNumDocument;
-        private SeekBar seekBarDocument;
         private ConstraintLayout constraintLayout;
         public QuestionCategoryViewHolder(@NonNull View itemView) {
                 super(itemView);
                 imgDocument = itemView.findViewById(R.id.img_item_document);
-//                seekBarDocument=itemView.findViewById(R.id.sb_item_document);
-            numQuest = itemView.findViewById(R.id.tv_number_quest);
                 tittleDocument = itemView.findViewById(R.id.tv_tittle_item_document);
                 constraintLayout = itemView.findViewById(R.id.item_document);
-//                seekBarNumDocument = itemView.findViewById(R.id.tv_seekBarNum_item_document);
         }
 
 

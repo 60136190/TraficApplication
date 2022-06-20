@@ -18,12 +18,16 @@ import retrofit2.http.Path;
 public interface UserApi {
     @POST("user/login")
     Call<LoginResponse> Login(@Body UserLogin userLogin);
+
     @GET("user/getProfile/{id}")
     Call<ProfileResponse> Profile(@Path("id") String id);
+
     @POST("user/register")
     Call<LoginResponse> Register(@Body UserRegister userRegister);
+
     @PATCH("user/updateUser/{id}")
     Call<ResponseDTO> UpdateUser(@Body UserUpdate userUpdate, @Path("id") String id);
+
     @PATCH("user/changePassword/{id}")
     Call<ResponseDTO> UpdatePass(@Body PasswordUpdate passwordUpdate, @Path("id") String id);
 

@@ -11,8 +11,10 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface HistoryApi {
+
     @GET("history/getAll")
     Call<TestHistoryResponse> getHistory();
+
     @POST("history/add")
     Call<ResponseDTO> saveHistory(@Body History history);
 }

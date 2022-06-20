@@ -51,7 +51,7 @@ public class TestDoingActivity extends AppCompatActivity {
     private Button btnPrevious;
     private Button btnNext;
     private TextView tvCount,tvTime;
-    private long backPressTime;
+
     private List<QuestionAll> questionAlls = new ArrayList<>();
     private List<QuestionAll> questions = new ArrayList<>();
     @Override
@@ -66,9 +66,6 @@ public class TestDoingActivity extends AppCompatActivity {
 
     }
 
-    private void checkAnswer() {
-
-    }
 
 
     private void showResult() {

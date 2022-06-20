@@ -35,38 +35,16 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class QuestionActivity extends AppCompatActivity {
-
     private RecyclerView mRecyclerView;
-
     private QuestionLearnAdapter questionLearnAdapter;
     private Button btnPrevious;
     private Button btnNext;
     private TextView tvCount;
-    private ImageView imgChange;
-    private ImageView imgChanged;
-    //    private List<Question> list;
 
-//    boolean barIsShowing = true;
-
-//    public void fade(View view){
-//        Log.i("Info","selected");
-//        ImageView view1 = findViewById(R.id.img_change);
-//        ImageView view2 = findViewById(R.id.img_changed);
-//        if (barIsShowing){
-//            barIsShowing = false;
-//            view1.animate().alpha(0).setDuration(500);
-//            view2.animate().alpha(1).setDuration(500);
-//        }else{
-//            barIsShowing = true;
-//            view1.animate().alpha(1).setDuration(500);
-//            view2.animate().alpha(0).setDuration(500);
-//        }
-//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-
         initUi();
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -76,16 +54,11 @@ public class QuestionActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.rcv_question);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        questionLearnAdapter = new QuestionLearnAdapter(Question1Activity.this, list);
-//        mRecyclerView.setAdapter(questionLearnAdapter);
+
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-//                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-//                    int position = getCurrentItem();
-//                    tvCount.setText("Question " + (position+1) + " / " + list.size());
-//                }
                 int position = getCurrentItem();
                 tvCount.setText("Question\n"+"" + (position+1) + " / " + questionLearnAdapter.getItemCount());
             }
@@ -123,16 +96,6 @@ public class QuestionActivity extends AppCompatActivity {
         btnPrevious = findViewById(R.id.btn_previous);
         btnNext = findViewById(R.id.btn_next);
         tvCount = findViewById(R.id.tv_count);
-    }
-
-
-    public boolean hasPreview() {
-        return getCurrentItem() > 0;
-    }
-
-    public boolean hasNext() {
-        return mRecyclerView.getAdapter() != null &&
-                getCurrentItem() < (mRecyclerView.getAdapter().getItemCount() - 1);
     }
 
     public void preview() {

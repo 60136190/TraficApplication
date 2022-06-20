@@ -78,9 +78,6 @@
             android:name=".activities.activities.TestActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.auth.LoginFirstActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.auth.RegisterActivity"
             android:exported="false" />
         <activity

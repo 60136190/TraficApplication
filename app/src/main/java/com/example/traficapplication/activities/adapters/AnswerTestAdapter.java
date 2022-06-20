@@ -28,7 +28,7 @@ import java.util.List;
 
 public class AnswerTestAdapter extends RecyclerView.Adapter<AnswerTestAdapter.AnswerViewHolder> {
     private Context context;
-    List<AnswerAll> answers = new ArrayList<>();
+    List<AnswerAll> answers ;
 
     private int checkedPosition =0;
 

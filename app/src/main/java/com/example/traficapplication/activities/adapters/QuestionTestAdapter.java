@@ -40,14 +40,6 @@ public class QuestionTestAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             this.context = context;
         }
 
-        public List<QuestionAll> getQuestions() {
-            return questions;
-        }
-
-        public void setQuestions(List<QuestionAll> questions) {
-            this.questions = questions;
-        }
-
 
 
 

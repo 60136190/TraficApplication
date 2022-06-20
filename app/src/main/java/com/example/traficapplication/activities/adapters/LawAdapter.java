@@ -41,24 +41,8 @@ public class LawAdapter extends RecyclerView.Adapter<LawAdapter.ItemLawViewHolde
         if (itemL == null) {
             return;
         }
-//        holder.imgItemLaw.setImageResource(itemL.getImgItemLaw());
         holder.tittleItemLaw.setText(itemL.getTittleItemLaw());
         holder.contentItemLaw.setText(itemL.getContentItemLaw());
-//        holder.detailItemLaw.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int img = itemL.getImgItemLaw();
-//                String tittle = itemL.getTittleItemLaw();
-//                String content = itemL.getContentItemLaw();
-//                String detail = itemL.getDetailItemLaw();
-//                Intent intent = new Intent(itemLawContext, LawDetailListActivity.class);
-//                intent.putExtra("img",img);
-//                intent.putExtra("tittle",tittle);
-//                intent.putExtra("content",content);
-//                intent.putExtra("detail",detail);
-//                itemLawContext.startActivity(intent);
-//            }
-//        });
     }
 
     @Override
