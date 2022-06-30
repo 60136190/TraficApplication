@@ -14,31 +14,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.activities.OtherActivity;
-import com.example.traficapplication.activities.models.Law;
+import com.example.traficapplication.activities.models.LawCategory;
 
 import java.util.List;
 
 public class OtherAdapter extends RecyclerView.Adapter<OtherAdapter.LawViewHolder> {
     private Context context;
-    private List<Law> law;
+    private List<LawCategory> lawCategory;
 
     public OtherAdapter(Context context) {
         this.context = context;
     }
 
-    public void setData(List<Law> law) {
-        this.law = law;
+    public void setData(List<LawCategory> lawCategory) {
+        this.lawCategory = lawCategory;
         notifyDataSetChanged();
     }
     @NonNull
     @Override
     public OtherAdapter.LawViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_type_law, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_law_category, parent, false);
         return new OtherAdapter.LawViewHolder(view);
     }
     @Override
     public void onBindViewHolder(@NonNull OtherAdapter.LawViewHolder holder, int position) {
-        Law l = law.get(position);
+        LawCategory l = lawCategory.get(position);
         int a = position;
         if (l == null) {
             return;
@@ -57,8 +57,8 @@ public class OtherAdapter extends RecyclerView.Adapter<OtherAdapter.LawViewHolde
     }
     @Override
     public int getItemCount() {
-        if (law != null) {
-            return law.size();
+        if (lawCategory != null) {
+            return lawCategory.size();
         }
         return 0;
     }

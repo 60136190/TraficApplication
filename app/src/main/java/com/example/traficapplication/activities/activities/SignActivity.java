@@ -15,7 +15,6 @@ public class SignActivity extends AppCompatActivity {
 
     private TabLayout tabLayoutSignal;
     private ViewPager viewPagerSignal;
-    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

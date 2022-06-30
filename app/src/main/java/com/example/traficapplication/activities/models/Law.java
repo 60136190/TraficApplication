@@ -1,27 +1,46 @@
 package com.example.traficapplication.activities.models;
 
 public class Law {
-    private int imgLaw;
-    private String typeLaw;
+    private int imgItemLaw;
+    private String tittleItemLaw,contentItemLaw,detailItemLaw;
 
-    public Law(int imgLaw, String typeLaw) {
-        this.imgLaw = imgLaw;
-        this.typeLaw = typeLaw;
+
+    public Law(int imgItemLaw, String tittleItemLaw, String contentItemLaw, String detailItemLaw) {
+        this.imgItemLaw = imgItemLaw;
+        this.tittleItemLaw = tittleItemLaw;
+        this.contentItemLaw = contentItemLaw;
+        this.detailItemLaw = detailItemLaw;
     }
 
-    public int getImgLaw() {
-        return imgLaw;
+    public int getImgItemLaw() {
+        return imgItemLaw;
     }
 
-    public void setImgLaw(int imgLaw) {
-        this.imgLaw = imgLaw;
+    public void setImgItemLaw(int imgItemLaw) {
+        this.imgItemLaw = imgItemLaw;
     }
 
-    public String getTypeLaw() {
-        return typeLaw;
+    public String getTittleItemLaw() {
+        return tittleItemLaw;
     }
 
-    public void setTypeLaw(String typeLaw) {
-        this.typeLaw = typeLaw;
+    public void setTittleItemLaw(String tittleItemLaw) {
+        this.tittleItemLaw = tittleItemLaw;
+    }
+
+    public String getContentItemLaw() {
+        return contentItemLaw;
+    }
+
+    public void setContentItemLaw(String contentItemLaw) {
+        this.contentItemLaw = contentItemLaw;
+    }
+
+    public String getDetailItemLaw() {
+        return detailItemLaw;
+    }
+
+    public void setDetailItemLaw(String detailItemLaw) {
+        this.detailItemLaw = detailItemLaw;
     }
 }

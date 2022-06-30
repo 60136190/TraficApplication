@@ -44,7 +44,7 @@ public class UserUpdateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_edit);
         initUi();
         getIn4();
-//        changeAvt();
+
         saveChange();
         exit();
     }
@@ -55,8 +55,7 @@ public class UserUpdateActivity extends AppCompatActivity {
 
 
 
-//    private void changeAvt() {
-//    }
+
 
     private void openDialog(int gravity){
 

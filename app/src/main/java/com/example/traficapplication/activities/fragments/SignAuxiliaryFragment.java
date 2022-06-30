@@ -32,7 +32,7 @@ import retrofit2.Response;
 
 public class SignAuxiliaryFragment extends Fragment {
 
-private ArrayAdapter<String> adapter;
+
     private ArrayList<String> stringArrayList = new ArrayList<>();
     private View auxiliarySignalView;
     private RecyclerView recyclerView;

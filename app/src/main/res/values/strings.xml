@@ -6,7 +6,7 @@
     <string name="string_detail">Xem chi tiết>>></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="string_warning_exit_test">Bạn có muốn thoát, nếu chọn bạn có thể  quay lại và tiếp tục làm sau</string>
+    <string name="string_warning_exit_test">Bạn có muốn thoát, nếu chọn lưu bạn có thể quay lại và tiếp tục làm sau</string>
     <string name="string_continue">Tiếp tục</string>
     <string name="string_exit">Thoát</string>
     <string name="string_warning_user_data">Thông tin chưa được lưu! Bạn có muốn thoát!</string>
@@ -19,4 +19,7 @@
     <string name="test">25 câu/ 19 phút</string>
     <string name="Login">Đăng nhập</string>
     <string name="Create">Đăng kí</string>
+    <string name="A1">Đề ngẫu nhiên hạng A1</string>
+    <string name="save">Lưu</string>
+    <string name="more_info">Thông tin thêm</string>
 </resources>

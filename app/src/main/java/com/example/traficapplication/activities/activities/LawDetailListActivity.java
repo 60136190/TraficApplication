@@ -11,7 +11,6 @@ import com.example.traficapplication.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LawDetailListActivity extends AppCompatActivity {
-
     private TextView tvItemLawTittle;
     private TextView tvItemLawDetail;
     private TextView tvItemLawContent;

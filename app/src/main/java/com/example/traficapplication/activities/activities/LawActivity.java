@@ -11,7 +11,6 @@ import com.example.traficapplication.activities.adapters.LawTabLayoutVPAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class LawActivity extends AppCompatActivity {
-
     private TabLayout tabLayoutLaw;
     private ViewPager viewPagerLaw;
     @Override

@@ -63,7 +63,7 @@
            android:background="@drawable/border_btn_sign_1st_screen"
            app:backgroundTint="@color/purple_800"
            android:textAllCaps="false"
-           android:text="@string/string_continue"
+           android:text="@string/save"
            android:layout_marginRight="30dp"
            android:textColor="@color/dark_white"
            />

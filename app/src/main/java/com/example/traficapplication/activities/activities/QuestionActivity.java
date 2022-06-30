@@ -24,18 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.traficapplication.R;
-import com.example.traficapplication.activities.MainActivity;
-import com.example.traficapplication.activities.adapters.QuestionAdapter;
+import com.example.traficapplication.activities.adapters.QuestionLearnAdapter;
 import com.example.traficapplication.activities.api.ApiClient;
-import com.example.traficapplication.activities.auth.LoginActivity;
-import com.example.traficapplication.activities.models.Question;
 import com.example.traficapplication.activities.models.QuestionCategoryResponse;
-import com.example.traficapplication.activities.sliders.FirstActivity;
-import com.example.traficapplication.activities.sliders.SlideActivity;
 import com.example.traficapplication.activities.utils.Contants;
 import com.example.traficapplication.activities.utils.StoreUtils;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -44,30 +37,13 @@ import retrofit2.Response;
 public class QuestionActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-//    private List<Question> list;
-    private QuestionAdapter questionAdapter;
+
+    private QuestionLearnAdapter questionLearnAdapter;
     private Button btnPrevious;
     private Button btnNext;
     private TextView tvCount;
-    private ImageView imgChange;
-    private ImageView imgChanged;
 
-//    boolean barIsShowing = true;
 
-//    public void fade(View view){
-//        Log.i("Info","selected");
-//        ImageView view1 = findViewById(R.id.img_change);
-//        ImageView view2 = findViewById(R.id.img_changed);
-//        if (barIsShowing){
-//            barIsShowing = false;
-//            view1.animate().alpha(0).setDuration(500);
-//            view2.animate().alpha(1).setDuration(500);
-//        }else{
-//            barIsShowing = true;
-//            view1.animate().alpha(1).setDuration(500);
-//            view2.animate().alpha(0).setDuration(500);
-//        }
-//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,18 +58,14 @@ public class QuestionActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.rcv_question);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        questionAdapter = new QuestionAdapter(Question1Activity.this, list);
-//        mRecyclerView.setAdapter(questionAdapter);
+
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-//                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-//                    int position = getCurrentItem();
-//                    tvCount.setText("Question " + (position+1) + " / " + list.size());
-//                }
+
                 int position = getCurrentItem();
-                tvCount.setText("Question\n"+"" + (position+1) + " / " + questionAdapter.getItemCount());
+                tvCount.setText("Question\n"+"" + (position+1) + " / " + questionLearnAdapter.getItemCount());
             }
         });
 
@@ -251,8 +223,8 @@ public class QuestionActivity extends AppCompatActivity {
         responseDTOCall.enqueue(new Callback<QuestionCategoryResponse>() {
             @Override
             public void onResponse(Call<QuestionCategoryResponse> call, Response<QuestionCategoryResponse> response) {
-                questionAdapter = new QuestionAdapter(QuestionActivity.this,response.body().getData());
-                mRecyclerView.setAdapter(questionAdapter);
+                questionLearnAdapter = new QuestionLearnAdapter(QuestionActivity.this,response.body().getData());
+                mRecyclerView.setAdapter(questionLearnAdapter);
             }
             @Override
             public void onFailure(Call<QuestionCategoryResponse> call, Throwable t) {

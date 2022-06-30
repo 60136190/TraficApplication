@@ -54,10 +54,6 @@ public class PasswordUpdateActivity extends AppCompatActivity {
     }
 
 
-
-//    private void changeAvt() {
-//    }
-
     private void openDialog(int gravity){
 
         final Dialog dialog = new Dialog(this);

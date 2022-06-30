@@ -12,8 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.traficapplication.R;
 import com.example.traficapplication.activities.adapters.CarAdapter;
-import com.example.traficapplication.activities.adapters.MotoAdapter;
-import com.example.traficapplication.activities.models.Law;
+import com.example.traficapplication.activities.models.LawCategory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,21 +41,21 @@ public class CarFragment extends Fragment {
         recyclerView.setAdapter(lawAdapter);
     }
 
-    private List<Law> getListLaw() {
-        List<Law> listLaw = new ArrayList<>();
-        listLaw.add(new Law(R.drawable.signpost, "Hiệu lệnh, biển chỉ dẫn"));
-        listLaw.add(new Law(R.drawable.directions, "Chuyển hướng, nhường đường"));
-        listLaw.add(new Law(R.drawable.parking, "Dừng xe, đỗ xe"));
-        listLaw.add(new Law(R.drawable.demostration, "Thiết bị ưu tiên, còi"));
-        listLaw.add(new Law(R.drawable.speedometer, "Tốc độ, khoảng cách an toàn"));
-        listLaw.add(new Law(R.drawable.transportations, "Vận chuyển người, hàng hóa"));
-        listLaw.add(new Law(R.drawable.helmet, "Trang thiết bị phương tiện"));
-        listLaw.add(new Law(R.drawable.stop, "Đường cấm, đường một chiều"));
-        listLaw.add(new Law(R.drawable.non_alcoholic_beer, "Nồng độ cồn, chất kích thích"));
-        listLaw.add(new Law(R.drawable.certification, "Giấy tờ xe"));
-        listLaw.add(new Law(R.drawable.gamer, "Khác"));
+    private List<LawCategory> getListLaw() {
+        List<LawCategory> listLawCategory = new ArrayList<>();
+        listLawCategory.add(new LawCategory(R.drawable.signpost, "Hiệu lệnh, biển chỉ dẫn"));
+        listLawCategory.add(new LawCategory(R.drawable.directions, "Chuyển hướng, nhường đường"));
+        listLawCategory.add(new LawCategory(R.drawable.parking, "Dừng xe, đỗ xe"));
+        listLawCategory.add(new LawCategory(R.drawable.demostration, "Thiết bị ưu tiên, còi"));
+        listLawCategory.add(new LawCategory(R.drawable.speedometer, "Tốc độ, khoảng cách an toàn"));
+        listLawCategory.add(new LawCategory(R.drawable.transportations, "Vận chuyển người, hàng hóa"));
+        listLawCategory.add(new LawCategory(R.drawable.helmet, "Trang thiết bị phương tiện"));
+        listLawCategory.add(new LawCategory(R.drawable.stop, "Đường cấm, đường một chiều"));
+        listLawCategory.add(new LawCategory(R.drawable.non_alcoholic_beer, "Nồng độ cồn, chất kích thích"));
+        listLawCategory.add(new LawCategory(R.drawable.certification, "Giấy tờ xe"));
+        listLawCategory.add(new LawCategory(R.drawable.gamer, "Khác"));
 
-        return listLaw;
+        return listLawCategory;
     }
     private void intiUi() {
         recyclerView = view.findViewById(R.id.rv_car);
